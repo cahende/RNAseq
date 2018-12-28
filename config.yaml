@@ -1,0 +1,22 @@
+#Set working directory
+workdir: "$HOME/scratch/stephensiTranscriptome-november2018-mayvInf"
+
+#Set sample names
+SAMPLES: ["V_D2_Rep_1", "V_D2_Rep_2", "V_D2_Rep_3", "V_D7_Rep_1", "V_D7_Rep_2", "V_D7_Rep_3", "V_D14_Rep_1", "V_D14_Rep_2", "V_D14_Rep_3", "C_D2_Rep_1", "C_D2_Rep_2", "C_D2_Rep_3", "C_D7_Rep_1", "C_D7_Rep_2", "C_D7_Rep_3", "C_D14_Rep_1", "C_D14_Rep_2", "C_D14_Rep_3",]
+
+#Set group ID
+GROUP_ID: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "2", "2", "2", "2", "2"]
+GROUP_MAX: "2"
+
+#Set reference genome and transcriptome annotation file
+GENOME: "genomes/anophelesStephensiScaffold-asteL2.3.fa"
+GENOME_ANNOTATION: "genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf"
+
+#Define important paths
+ADAPTERS: "/storage/work/cxb585/bin/Trimmomatic-0.36/adapters/TruSeq3-PE.fa"
+GATK: "/storage/work/cxb585/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalysisTK.jar"
+PICARD: "/storage/work/cxb585/bin/picard-2.10.10/picard.jar"
+TRIMMOMATIC: "/storage/work/cxb585/bin/Trimmomatic-0.36/trimmomatic-0.36.jar"
+
+#Select modules to load
+MODULES: ["bamtools", "bcftools", "tophat", "gatk", "picard", "python", "samtools", "trimmomatic", "vcftools"]

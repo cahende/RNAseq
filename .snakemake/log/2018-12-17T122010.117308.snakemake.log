@@ -1,0 +1,2 @@
+SyntaxError in line 133 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Multiple run or shell keywords in rule rSubread. (Snakefile, line 133)

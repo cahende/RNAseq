@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 2
+Job counts:
+	count	jobs
+	1	all
+	1	gene_level_differential_expression
+	2
+
+[Wed Dec 19 17:27:52 2018]
+rule gene_level_differential_expression:
+    input: data/processedData/read_counts/V_D2_Rep_1.readCounts.txt, data/processedData/read_counts/V_D2_Rep_2.readCounts.txt, data/processedData/read_counts/V_D2_Rep_3.readCounts.txt, data/processedData/read_counts/V_D7_Rep_1.readCounts.txt, data/processedData/read_counts/V_D7_Rep_2.readCounts.txt, data/processedData/read_counts/V_D7_Rep_3.readCounts.txt, data/processedData/read_counts/V_D14_Rep_1.readCounts.txt, data/processedData/read_counts/V_D14_Rep_2.readCounts.txt, data/processedData/read_counts/V_D14_Rep_3.readCounts.txt, data/processedData/read_counts/C_D2_Rep_1.readCounts.txt, data/processedData/read_counts/C_D2_Rep_2.readCounts.txt, data/processedData/read_counts/C_D2_Rep_3.readCounts.txt, data/processedData/read_counts/C_D7_Rep_1.readCounts.txt, data/processedData/read_counts/C_D7_Rep_2.readCounts.txt, data/processedData/read_counts/C_D7_Rep_3.readCounts.txt, data/processedData/read_counts/C_D14_Rep_1.readCounts.txt, data/processedData/read_counts/C_D14_Rep_2.readCounts.txt, data/processedData/read_counts/C_D14_Rep_3.readCounts.txt
+    output: data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    log: logs/edgeR.log
+    jobid: 19
+
+Submitted job 19 with external jobid '8537387.torque01.util.production.int.aci.ics.psu.edu'.
+[Wed Dec 19 17:29:02 2018]
+Finished job 19.
+1 of 2 steps (50%) done
+
+[Wed Dec 19 17:29:02 2018]
+localrule all:
+    input: data/processedData/read_counts/V_D2_Rep_1.readCounts.txt, data/processedData/read_counts/V_D2_Rep_2.readCounts.txt, data/processedData/read_counts/V_D2_Rep_3.readCounts.txt, data/processedData/read_counts/V_D7_Rep_1.readCounts.txt, data/processedData/read_counts/V_D7_Rep_2.readCounts.txt, data/processedData/read_counts/V_D7_Rep_3.readCounts.txt, data/processedData/read_counts/V_D14_Rep_1.readCounts.txt, data/processedData/read_counts/V_D14_Rep_2.readCounts.txt, data/processedData/read_counts/V_D14_Rep_3.readCounts.txt, data/processedData/read_counts/C_D2_Rep_1.readCounts.txt, data/processedData/read_counts/C_D2_Rep_2.readCounts.txt, data/processedData/read_counts/C_D2_Rep_3.readCounts.txt, data/processedData/read_counts/C_D7_Rep_1.readCounts.txt, data/processedData/read_counts/C_D7_Rep_2.readCounts.txt, data/processedData/read_counts/C_D7_Rep_3.readCounts.txt, data/processedData/read_counts/C_D14_Rep_1.readCounts.txt, data/processedData/read_counts/C_D14_Rep_2.readCounts.txt, data/processedData/read_counts/C_D14_Rep_3.readCounts.txt, data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    jobid: 0
+
+[Wed Dec 19 17:29:02 2018]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-19T172751.786125.snakemake.log

@@ -1,0 +1,289 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 163
+Job counts:
+	count	jobs
+	18	add_read_groups
+	1	all
+	18	filter_mapped_and_paired_reads
+	18	fix_mate_pairs
+	18	local_realignment
+	18	local_realignment_ID
+	18	quality_filter_reads
+	18	remove_duplicate_reads
+	18	sort_bam
+	18	tophat_map
+	163
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+    log: logs/C_D2_Rep_3.map_and_bam.log
+    jobid: 152
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 152 with external jobid '8351189.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+    log: logs/C_D2_Rep_2.map_and_bam.log
+    jobid: 145
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 145 with external jobid '8351190.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+    log: logs/V_D14_Rep_1.map_and_bam.log
+    jobid: 150
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 150 with external jobid '8351191.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+    log: logs/C_D7_Rep_2.map_and_bam.log
+    jobid: 159
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 159 with external jobid '8351192.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+    log: logs/V_D7_Rep_1.map_and_bam.log
+    jobid: 161
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 161 with external jobid '8351193.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+    log: logs/V_D7_Rep_3.map_and_bam.log
+    jobid: 156
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 156 with external jobid '8351194.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+    log: logs/C_D2_Rep_1.map_and_bam.log
+    jobid: 149
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 149 with external jobid '8351195.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+    log: logs/C_D14_Rep_3.map_and_bam.log
+    jobid: 153
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 153 with external jobid '8351196.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+    log: logs/C_D7_Rep_1.map_and_bam.log
+    jobid: 155
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 155 with external jobid '8351197.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+    log: logs/V_D14_Rep_2.map_and_bam.log
+    jobid: 154
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 154 with external jobid '8351198.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+    log: logs/V_D7_Rep_2.map_and_bam.log
+    jobid: 160
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 160 with external jobid '8351199.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+    log: logs/C_D14_Rep_2.map_and_bam.log
+    jobid: 151
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 151 with external jobid '8351200.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+    log: logs/V_D2_Rep_1.map_and_bam.log
+    jobid: 158
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 158 with external jobid '8351201.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+    log: logs/C_D7_Rep_3.map_and_bam.log
+    jobid: 148
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 148 with external jobid '8351202.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+    log: logs/C_D14_Rep_1.map_and_bam.log
+    jobid: 157
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 157 with external jobid '8351203.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+    log: logs/V_D2_Rep_2.map_and_bam.log
+    jobid: 147
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 147 with external jobid '8351204.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+    log: logs/V_D14_Rep_3.map_and_bam.log
+    jobid: 146
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 146 with external jobid '8351205.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+    log: logs/V_D2_Rep_3.map_and_bam.log
+    jobid: 162
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 162 with external jobid '8351206.torque01.util.production.int.aci.ics.psu.edu'.
+    Error in rule tophat_map:
+        jobid: 153
+        output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+        log: logs/C_D14_Rep_3.map_and_bam.log
+        cluster_jobid: 8351196.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 155
+        output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+        log: logs/C_D7_Rep_1.map_and_bam.log
+        cluster_jobid: 8351197.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 161
+        output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+        log: logs/V_D7_Rep_1.map_and_bam.log
+        cluster_jobid: 8351193.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 156
+        output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+        log: logs/V_D7_Rep_3.map_and_bam.log
+        cluster_jobid: 8351194.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 154
+        output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+        log: logs/V_D14_Rep_2.map_and_bam.log
+        cluster_jobid: 8351198.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 145
+        output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+        log: logs/C_D2_Rep_2.map_and_bam.log
+        cluster_jobid: 8351190.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 150
+        output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+        log: logs/V_D14_Rep_1.map_and_bam.log
+        cluster_jobid: 8351191.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 159
+        output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+        log: logs/C_D7_Rep_2.map_and_bam.log
+        cluster_jobid: 8351192.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 160
+        output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+        log: logs/V_D7_Rep_2.map_and_bam.log
+        cluster_jobid: 8351199.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 149
+        output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+        log: logs/C_D2_Rep_1.map_and_bam.log
+        cluster_jobid: 8351195.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 152
+        output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+        log: logs/C_D2_Rep_3.map_and_bam.log
+        cluster_jobid: 8351189.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 151
+        output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+        log: logs/C_D14_Rep_2.map_and_bam.log
+        cluster_jobid: 8351200.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 148
+        output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+        log: logs/C_D7_Rep_3.map_and_bam.log
+        cluster_jobid: 8351202.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 157
+        output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+        log: logs/C_D14_Rep_1.map_and_bam.log
+        cluster_jobid: 8351203.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 147
+        output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+        log: logs/V_D2_Rep_2.map_and_bam.log
+        cluster_jobid: 8351204.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 158
+        output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+        log: logs/V_D2_Rep_1.map_and_bam.log
+        cluster_jobid: 8351201.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 162
+        output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+        log: logs/V_D2_Rep_3.map_and_bam.log
+        cluster_jobid: 8351206.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule tophat_map:
+        jobid: 146
+        output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+        log: logs/V_D14_Rep_3.map_and_bam.log
+        cluster_jobid: 8351205.torque01.util.production.int.aci.ics.psu.edu
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-03T091538.824417.snakemake.log

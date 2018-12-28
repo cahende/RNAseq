@@ -1,0 +1,260 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 20
+Job counts:
+	count	jobs
+	1	all
+	1	gene_level_differential_expression
+	18	rSubread
+	20
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_2.readCounts.txt
+    log: logs/C_D2_Rep_2.rSubread.log
+    jobid: 11
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 11 with external jobid '8534794.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_3.readCounts.txt
+    log: logs/V_D14_Rep_3.rSubread.log
+    jobid: 9
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 9 with external jobid '8534795.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_1.readCounts.txt
+    log: logs/V_D7_Rep_1.rSubread.log
+    jobid: 4
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 4 with external jobid '8534796.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_3.readCounts.txt
+    log: logs/V_D2_Rep_3.rSubread.log
+    jobid: 3
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 3 with external jobid '8534797.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_3.readCounts.txt
+    log: logs/V_D7_Rep_3.rSubread.log
+    jobid: 6
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 6 with external jobid '8534798.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_2.readCounts.txt
+    log: logs/V_D7_Rep_2.rSubread.log
+    jobid: 5
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 5 with external jobid '8534799.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_3.readCounts.txt
+    log: logs/C_D2_Rep_3.rSubread.log
+    jobid: 12
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 12 with external jobid '8534800.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_1.readCounts.txt
+    log: logs/V_D2_Rep_1.rSubread.log
+    jobid: 1
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 1 with external jobid '8534801.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_2.readCounts.txt
+    log: logs/C_D14_Rep_2.rSubread.log
+    jobid: 17
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 17 with external jobid '8534802.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:39 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_1.readCounts.txt
+    log: logs/C_D7_Rep_1.rSubread.log
+    jobid: 13
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 13 with external jobid '8534803.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_3.readCounts.txt
+    log: logs/C_D7_Rep_3.rSubread.log
+    jobid: 15
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 15 with external jobid '8534804.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_1.readCounts.txt
+    log: logs/C_D14_Rep_1.rSubread.log
+    jobid: 16
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 16 with external jobid '8534805.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_2.readCounts.txt
+    log: logs/V_D2_Rep_2.rSubread.log
+    jobid: 2
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 2 with external jobid '8534806.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_2.readCounts.txt
+    log: logs/V_D14_Rep_2.rSubread.log
+    jobid: 8
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 8 with external jobid '8534807.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_1.readCounts.txt
+    log: logs/C_D2_Rep_1.rSubread.log
+    jobid: 10
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 10 with external jobid '8534808.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_2.readCounts.txt
+    log: logs/C_D7_Rep_2.rSubread.log
+    jobid: 14
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 14 with external jobid '8534809.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_3.readCounts.txt
+    log: logs/C_D14_Rep_3.rSubread.log
+    jobid: 18
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 18 with external jobid '8534810.torque01.util.production.int.aci.ics.psu.edu'.
+
+[Wed Dec 19 12:41:40 2018]
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_1.readCounts.txt
+    log: logs/V_D14_Rep_1.rSubread.log
+    jobid: 7
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 7 with external jobid '8534811.torque01.util.production.int.aci.ics.psu.edu'.
+[Wed Dec 19 12:44:01 2018]
+Finished job 9.
+1 of 20 steps (5%) done
+[Wed Dec 19 12:44:01 2018]
+Finished job 4.
+2 of 20 steps (10%) done
+[Wed Dec 19 12:44:01 2018]
+Finished job 3.
+3 of 20 steps (15%) done
+[Wed Dec 19 12:44:01 2018]
+Finished job 17.
+4 of 20 steps (20%) done
+[Wed Dec 19 12:44:02 2018]
+Finished job 16.
+5 of 20 steps (25%) done
+[Wed Dec 19 12:44:12 2018]
+Finished job 11.
+6 of 20 steps (30%) done
+[Wed Dec 19 12:44:12 2018]
+Finished job 6.
+7 of 20 steps (35%) done
+[Wed Dec 19 12:44:12 2018]
+Finished job 5.
+8 of 20 steps (40%) done
+[Wed Dec 19 12:44:12 2018]
+Finished job 1.
+9 of 20 steps (45%) done
+[Wed Dec 19 12:44:12 2018]
+Finished job 13.
+10 of 20 steps (50%) done
+[Wed Dec 19 12:44:23 2018]
+Finished job 12.
+11 of 20 steps (55%) done
+[Wed Dec 19 12:45:33 2018]
+Finished job 15.
+12 of 20 steps (60%) done
+[Wed Dec 19 12:45:43 2018]
+Finished job 2.
+13 of 20 steps (65%) done
+[Wed Dec 19 12:46:33 2018]
+Finished job 18.
+14 of 20 steps (70%) done
+[Wed Dec 19 12:46:43 2018]
+Finished job 8.
+15 of 20 steps (75%) done
+[Wed Dec 19 12:46:43 2018]
+Finished job 10.
+16 of 20 steps (80%) done
+[Wed Dec 19 12:46:43 2018]
+Finished job 7.
+17 of 20 steps (85%) done
+[Wed Dec 19 12:46:53 2018]
+Finished job 14.
+18 of 20 steps (90%) done
+
+[Wed Dec 19 12:46:53 2018]
+rule gene_level_differential_expression:
+    input: data/processedData/read_counts/V_D2_Rep_1.readCounts.txt, data/processedData/read_counts/V_D2_Rep_2.readCounts.txt, data/processedData/read_counts/V_D2_Rep_3.readCounts.txt, data/processedData/read_counts/V_D7_Rep_1.readCounts.txt, data/processedData/read_counts/V_D7_Rep_2.readCounts.txt, data/processedData/read_counts/V_D7_Rep_3.readCounts.txt, data/processedData/read_counts/V_D14_Rep_1.readCounts.txt, data/processedData/read_counts/V_D14_Rep_2.readCounts.txt, data/processedData/read_counts/V_D14_Rep_3.readCounts.txt, data/processedData/read_counts/C_D2_Rep_1.readCounts.txt, data/processedData/read_counts/C_D2_Rep_2.readCounts.txt, data/processedData/read_counts/C_D2_Rep_3.readCounts.txt, data/processedData/read_counts/C_D7_Rep_1.readCounts.txt, data/processedData/read_counts/C_D7_Rep_2.readCounts.txt, data/processedData/read_counts/C_D7_Rep_3.readCounts.txt, data/processedData/read_counts/C_D14_Rep_1.readCounts.txt, data/processedData/read_counts/C_D14_Rep_2.readCounts.txt, data/processedData/read_counts/C_D14_Rep_3.readCounts.txt
+    output: data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    jobid: 19
+
+Submitted job 19 with external jobid '8534839.torque01.util.production.int.aci.ics.psu.edu'.
+[Wed Dec 19 12:47:43 2018]
+Error in rule gene_level_differential_expression:
+    jobid: 19
+    output: data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    cluster_jobid: 8534839.torque01.util.production.int.aci.ics.psu.edu
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-19T124139.004785.snakemake.log

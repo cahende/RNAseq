@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 37 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule sort_bam:
+data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/accepted_hits.bam

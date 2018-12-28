@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 125 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule rSubread:
+{config[GTF]}
+{config[GENOME]}

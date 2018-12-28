@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 59 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule fix_mate_pairs:
+data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.bwa.sorted.bam

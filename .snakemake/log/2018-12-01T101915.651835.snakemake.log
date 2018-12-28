@@ -1,0 +1,348 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	18	add_read_groups
+	1	all
+	18	filter_mapped_and_paired_reads
+	18	fix_mate_pairs
+	18	local_realignment
+	18	local_realignment_ID
+	18	quality_filter_reads
+	18	remove_duplicate_reads
+	18	sort_bam
+	18	tophat_map
+	163
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+    log: logs/V_D7_Rep_3.map_and_bam.log
+    jobid: 148
+    wildcards: sample=V_D7_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+    log: logs/C_D2_Rep_2.map_and_bam.log
+    jobid: 153
+    wildcards: sample=C_D2_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+    log: logs/C_D2_Rep_3.map_and_bam.log
+    jobid: 150
+    wildcards: sample=C_D2_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+    log: logs/V_D7_Rep_1.map_and_bam.log
+    jobid: 151
+    wildcards: sample=V_D7_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+    log: logs/V_D14_Rep_1.map_and_bam.log
+    jobid: 155
+    wildcards: sample=V_D14_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+    log: logs/C_D2_Rep_1.map_and_bam.log
+    jobid: 158
+    wildcards: sample=C_D2_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+    log: logs/V_D2_Rep_3.map_and_bam.log
+    jobid: 159
+    wildcards: sample=V_D2_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+    log: logs/V_D2_Rep_1.map_and_bam.log
+    jobid: 162
+    wildcards: sample=V_D2_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+    log: logs/C_D14_Rep_1.map_and_bam.log
+    jobid: 161
+    wildcards: sample=C_D14_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+    log: logs/V_D2_Rep_2.map_and_bam.log
+    jobid: 145
+    wildcards: sample=V_D2_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+    log: logs/C_D14_Rep_3.map_and_bam.log
+    jobid: 147
+    wildcards: sample=C_D14_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+    log: logs/C_D7_Rep_3.map_and_bam.log
+    jobid: 156
+    wildcards: sample=C_D7_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+    log: logs/V_D14_Rep_2.map_and_bam.log
+    jobid: 157
+    wildcards: sample=V_D14_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+    log: logs/C_D14_Rep_2.map_and_bam.log
+    jobid: 160
+    wildcards: sample=C_D14_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+    log: logs/V_D14_Rep_3.map_and_bam.log
+    jobid: 152
+    wildcards: sample=V_D14_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+    log: logs/V_D7_Rep_2.map_and_bam.log
+    jobid: 146
+    wildcards: sample=V_D7_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+    log: logs/C_D7_Rep_2.map_and_bam.log
+    jobid: 149
+    wildcards: sample=C_D7_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+    log: logs/C_D7_Rep_1.map_and_bam.log
+    jobid: 154
+    wildcards: sample=C_D7_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_3.sort_bam.log
+    jobid: 138
+    wildcards: sample=C_D7_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_1.sort_bam.log
+    jobid: 136
+    wildcards: sample=C_D7_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_2.sort_bam.log
+    jobid: 131
+    wildcards: sample=C_D7_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_3.sort_bam.log
+    jobid: 130
+    wildcards: sample=V_D7_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_1.sort_bam.log
+    jobid: 143
+    wildcards: sample=C_D14_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_3.sort_bam.log
+    jobid: 141
+    wildcards: sample=V_D2_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_2.sort_bam.log
+    jobid: 135
+    wildcards: sample=C_D2_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_1.sort_bam.log
+    jobid: 137
+    wildcards: sample=V_D14_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_1.sort_bam.log
+    jobid: 140
+    wildcards: sample=C_D2_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_2.sort_bam.log
+    jobid: 142
+    wildcards: sample=C_D14_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_3.sort_bam.log
+    jobid: 129
+    wildcards: sample=C_D14_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_3.sort_bam.log
+    jobid: 132
+    wildcards: sample=C_D2_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_1.sort_bam.log
+    jobid: 133
+    wildcards: sample=V_D7_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_2.sort_bam.log
+    jobid: 127
+    wildcards: sample=V_D2_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_1.sort_bam.log
+    jobid: 144
+    wildcards: sample=V_D2_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_2.sort_bam.log
+    jobid: 139
+    wildcards: sample=V_D14_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_3.sort_bam.log
+    jobid: 134
+    wildcards: sample=V_D14_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_2.sort_bam.log
+    jobid: 128
+    wildcards: sample=V_D7_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/V_D7_Rep_3.fix_mate_pairs.log
+    jobid: 112
+    wildcards: sample=V_D7_Rep_3
+
+RuleException in line 59 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+NameError: The name 'PICARD' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

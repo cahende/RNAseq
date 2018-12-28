@@ -1,0 +1,214 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 19
+Job counts:
+	count	jobs
+	1	all
+	18	quality_filter_reads
+	19
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_3.quality_filter_reads.log
+    jobid: 5
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 5 with external jobid '8400137.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_1.quality_filter_reads.log
+    jobid: 18
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 18 with external jobid '8400138.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_2.quality_filter_reads.log
+    jobid: 1
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 1 with external jobid '8400139.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_2.quality_filter_reads.log
+    jobid: 9
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 9 with external jobid '8400140.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_2.quality_filter_reads.log
+    jobid: 17
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 17 with external jobid '8400141.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_1.quality_filter_reads.log
+    jobid: 16
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 16 with external jobid '8400142.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_3.quality_filter_reads.log
+    jobid: 8
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 8 with external jobid '8400143.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_1.quality_filter_reads.log
+    jobid: 10
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 10 with external jobid '8400144.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_1.quality_filter_reads.log
+    jobid: 14
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 14 with external jobid '8400145.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_2.quality_filter_reads.log
+    jobid: 7
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 7 with external jobid '8400146.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_2.quality_filter_reads.log
+    jobid: 13
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 13 with external jobid '8400147.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_3.quality_filter_reads.log
+    jobid: 4
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 4 with external jobid '8400148.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_3.quality_filter_reads.log
+    jobid: 3
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 3 with external jobid '8400149.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_3.quality_filter_reads.log
+    jobid: 6
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 6 with external jobid '8400150.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_1.quality_filter_reads.log
+    jobid: 15
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 15 with external jobid '8400151.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_1.quality_filter_reads.log
+    jobid: 11
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 11 with external jobid '8400152.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_3.quality_filter_reads.log
+    jobid: 2
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 2 with external jobid '8400153.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_2.quality_filter_reads.log
+    jobid: 12
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 12 with external jobid '8400154.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 7.
+1 of 19 steps (5%) done
+Finished job 4.
+2 of 19 steps (11%) done
+Finished job 5.
+3 of 19 steps (16%) done
+Finished job 8.
+4 of 19 steps (21%) done
+Finished job 16.
+5 of 19 steps (26%) done
+Finished job 17.
+6 of 19 steps (32%) done
+Finished job 14.
+7 of 19 steps (37%) done
+Finished job 1.
+8 of 19 steps (42%) done
+Finished job 13.
+9 of 19 steps (47%) done
+Finished job 18.
+10 of 19 steps (53%) done
+Finished job 10.
+11 of 19 steps (58%) done
+Finished job 9.
+12 of 19 steps (63%) done
+Finished job 11.
+13 of 19 steps (68%) done
+Finished job 2.
+14 of 19 steps (74%) done
+Finished job 15.
+15 of 19 steps (79%) done
+Finished job 6.
+16 of 19 steps (84%) done
+Finished job 12.
+17 of 19 steps (89%) done
+Finished job 3.
+18 of 19 steps (95%) done
+
+localrule all:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    jobid: 0
+
+Finished job 0.
+19 of 19 steps (100%) done
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-05T211302.379603.snakemake.log

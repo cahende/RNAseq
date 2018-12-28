@@ -1,0 +1,21 @@
+Building DAG of jobs...
+MissingInputException in line 7 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule all:
+data/processedData/aligned_reads/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+data/processedData/aligned_reads/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam

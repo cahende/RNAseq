@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 7 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule all:
+data/processedData/top_hits/glmControlVsInfectedFoldChange.txt

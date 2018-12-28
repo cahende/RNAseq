@@ -1,0 +1,281 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 19
+Job counts:
+	count	jobs
+	1	all
+	18	rSubread
+	19
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_2.readCounds.txt
+    log: logs/C_D14_Rep_2.quality_filter_reads.log
+    jobid: 8
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 8 with external jobid '8482917.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_3.readCounds.txt
+    log: logs/C_D2_Rep_3.quality_filter_reads.log
+    jobid: 16
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 16 with external jobid '8482918.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_1.readCounds.txt
+    log: logs/C_D14_Rep_1.quality_filter_reads.log
+    jobid: 4
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 4 with external jobid '8482919.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_1.readCounds.txt
+    log: logs/C_D7_Rep_1.quality_filter_reads.log
+    jobid: 11
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 11 with external jobid '8482920.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_2.readCounds.txt
+    log: logs/V_D7_Rep_2.quality_filter_reads.log
+    jobid: 12
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 12 with external jobid '8482921.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_2.readCounds.txt
+    log: logs/C_D7_Rep_2.quality_filter_reads.log
+    jobid: 1
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 1 with external jobid '8482922.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_2.readCounds.txt
+    log: logs/C_D2_Rep_2.quality_filter_reads.log
+    jobid: 3
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 3 with external jobid '8482923.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_2.readCounds.txt
+    log: logs/V_D14_Rep_2.quality_filter_reads.log
+    jobid: 7
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 7 with external jobid '8482924.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_1.readCounds.txt
+    log: logs/V_D2_Rep_1.quality_filter_reads.log
+    jobid: 13
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 13 with external jobid '8482925.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_3.readCounds.txt
+    log: logs/V_D2_Rep_3.quality_filter_reads.log
+    jobid: 14
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 14 with external jobid '8482926.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D2_Rep_1.readCounds.txt
+    log: logs/C_D2_Rep_1.quality_filter_reads.log
+    jobid: 9
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 9 with external jobid '8482927.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D14_Rep_3.readCounds.txt
+    log: logs/C_D14_Rep_3.quality_filter_reads.log
+    jobid: 5
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 5 with external jobid '8482928.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_3.readCounds.txt
+    log: logs/V_D7_Rep_3.quality_filter_reads.log
+    jobid: 6
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 6 with external jobid '8482929.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D7_Rep_1.readCounds.txt
+    log: logs/V_D7_Rep_1.quality_filter_reads.log
+    jobid: 18
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 18 with external jobid '8482930.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D2_Rep_2.readCounds.txt
+    log: logs/V_D2_Rep_2.quality_filter_reads.log
+    jobid: 2
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 2 with external jobid '8482931.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_3.readCounds.txt
+    log: logs/V_D14_Rep_3.quality_filter_reads.log
+    jobid: 15
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 15 with external jobid '8482932.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/V_D14_Rep_1.readCounds.txt
+    log: logs/V_D14_Rep_1.quality_filter_reads.log
+    jobid: 17
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 17 with external jobid '8482933.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule rSubread:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/read_counts/C_D7_Rep_3.readCounds.txt
+    log: logs/C_D7_Rep_3.quality_filter_reads.log
+    jobid: 10
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 10 with external jobid '8482934.torque01.util.production.int.aci.ics.psu.edu'.
+    Error in rule rSubread:
+        jobid: 8
+        output: data/processedData/read_counts/C_D14_Rep_2.readCounds.txt
+        log: logs/C_D14_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482917.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 16
+        output: data/processedData/read_counts/C_D2_Rep_3.readCounds.txt
+        log: logs/C_D2_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482918.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 4
+        output: data/processedData/read_counts/C_D14_Rep_1.readCounds.txt
+        log: logs/C_D14_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482919.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 11
+        output: data/processedData/read_counts/C_D7_Rep_1.readCounds.txt
+        log: logs/C_D7_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482920.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 12
+        output: data/processedData/read_counts/V_D7_Rep_2.readCounds.txt
+        log: logs/V_D7_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482921.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 1
+        output: data/processedData/read_counts/C_D7_Rep_2.readCounds.txt
+        log: logs/C_D7_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482922.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 3
+        output: data/processedData/read_counts/C_D2_Rep_2.readCounds.txt
+        log: logs/C_D2_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482923.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 7
+        output: data/processedData/read_counts/V_D14_Rep_2.readCounds.txt
+        log: logs/V_D14_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482924.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 13
+        output: data/processedData/read_counts/V_D2_Rep_1.readCounds.txt
+        log: logs/V_D2_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482925.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 14
+        output: data/processedData/read_counts/V_D2_Rep_3.readCounds.txt
+        log: logs/V_D2_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482926.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 9
+        output: data/processedData/read_counts/C_D2_Rep_1.readCounds.txt
+        log: logs/C_D2_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482927.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 5
+        output: data/processedData/read_counts/C_D14_Rep_3.readCounds.txt
+        log: logs/C_D14_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482928.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 6
+        output: data/processedData/read_counts/V_D7_Rep_3.readCounds.txt
+        log: logs/V_D7_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482929.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 18
+        output: data/processedData/read_counts/V_D7_Rep_1.readCounds.txt
+        log: logs/V_D7_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482930.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 2
+        output: data/processedData/read_counts/V_D2_Rep_2.readCounds.txt
+        log: logs/V_D2_Rep_2.quality_filter_reads.log
+        cluster_jobid: 8482931.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 15
+        output: data/processedData/read_counts/V_D14_Rep_3.readCounds.txt
+        log: logs/V_D14_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482932.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 17
+        output: data/processedData/read_counts/V_D14_Rep_1.readCounds.txt
+        log: logs/V_D14_Rep_1.quality_filter_reads.log
+        cluster_jobid: 8482933.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule rSubread:
+        jobid: 10
+        output: data/processedData/read_counts/C_D7_Rep_3.readCounds.txt
+        log: logs/C_D7_Rep_3.quality_filter_reads.log
+        cluster_jobid: 8482934.torque01.util.production.int.aci.ics.psu.edu
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-17T092020.801962.snakemake.log

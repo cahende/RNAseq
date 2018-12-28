@@ -1,0 +1,1453 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 163
+Job counts:
+	count	jobs
+	18	add_read_groups
+	1	all
+	18	filter_mapped_and_paired_reads
+	18	fix_mate_pairs
+	18	local_realignment
+	18	local_realignment_ID
+	18	quality_filter_reads
+	18	remove_duplicate_reads
+	18	sort_bam
+	18	star_map
+	163
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_1/
+    log: logs/V_D7_Rep_1.map_and_bam.log
+    jobid: 150
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 150 with external jobid '8397818.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_1/
+    log: logs/V_D14_Rep_1.map_and_bam.log
+    jobid: 157
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 157 with external jobid '8397819.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_2/
+    log: logs/C_D7_Rep_2.map_and_bam.log
+    jobid: 154
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 154 with external jobid '8397820.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_1/
+    log: logs/C_D2_Rep_1.map_and_bam.log
+    jobid: 146
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 146 with external jobid '8397821.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_3/
+    log: logs/C_D7_Rep_3.map_and_bam.log
+    jobid: 147
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 147 with external jobid '8397822.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_1/
+    log: logs/V_D2_Rep_1.map_and_bam.log
+    jobid: 148
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 148 with external jobid '8397823.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_3/
+    log: logs/V_D14_Rep_3.map_and_bam.log
+    jobid: 151
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 151 with external jobid '8397824.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_2/
+    log: logs/C_D2_Rep_2.map_and_bam.log
+    jobid: 145
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 145 with external jobid '8397825.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_3/
+    log: logs/V_D7_Rep_3.map_and_bam.log
+    jobid: 152
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 152 with external jobid '8397826.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_2/
+    log: logs/V_D14_Rep_2.map_and_bam.log
+    jobid: 153
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 153 with external jobid '8397827.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_3/
+    log: logs/C_D2_Rep_3.map_and_bam.log
+    jobid: 155
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 155 with external jobid '8397828.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_3/
+    log: logs/C_D14_Rep_3.map_and_bam.log
+    jobid: 160
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 160 with external jobid '8397829.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_1/
+    log: logs/C_D7_Rep_1.map_and_bam.log
+    jobid: 158
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 158 with external jobid '8397830.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_2/
+    log: logs/V_D2_Rep_2.map_and_bam.log
+    jobid: 162
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 162 with external jobid '8397831.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_3/
+    log: logs/V_D2_Rep_3.map_and_bam.log
+    jobid: 159
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 159 with external jobid '8397832.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_2/
+    log: logs/C_D14_Rep_2.map_and_bam.log
+    jobid: 156
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 156 with external jobid '8397833.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_2/
+    log: logs/V_D7_Rep_2.map_and_bam.log
+    jobid: 149
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 149 with external jobid '8397834.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_1/
+    log: logs/C_D14_Rep_1.map_and_bam.log
+    jobid: 161
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 161 with external jobid '8397835.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 147.
+1 of 163 steps (0.61%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.star.sorted.bam
+    log: logs/C_D7_Rep_3.sort_bam.log
+    jobid: 129
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 129 with external jobid '8397992.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 146.
+2 of 163 steps (1%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.star.sorted.bam
+    log: logs/C_D2_Rep_1.sort_bam.log
+    jobid: 128
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 128 with external jobid '8398012.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 154.
+3 of 163 steps (2%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.star.sorted.bam
+    log: logs/C_D7_Rep_2.sort_bam.log
+    jobid: 136
+    wildcards: sample=C_D7_Rep_2
+
+Finished job 145.
+4 of 163 steps (2%) done
+Submitted job 136 with external jobid '8398017.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.star.sorted.bam
+    log: logs/C_D2_Rep_2.sort_bam.log
+    jobid: 127
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 127 with external jobid '8398018.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 152.
+5 of 163 steps (3%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.star.sorted.bam
+    log: logs/V_D7_Rep_3.sort_bam.log
+    jobid: 134
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 134 with external jobid '8398019.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 148.
+6 of 163 steps (4%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.star.sorted.bam
+    log: logs/V_D2_Rep_1.sort_bam.log
+    jobid: 130
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 130 with external jobid '8398020.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 155.
+7 of 163 steps (4%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.star.sorted.bam
+    log: logs/C_D2_Rep_3.sort_bam.log
+    jobid: 137
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 137 with external jobid '8398021.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 150.
+8 of 163 steps (5%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.star.sorted.bam
+    log: logs/V_D7_Rep_1.sort_bam.log
+    jobid: 132
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 132 with external jobid '8398026.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 153.
+9 of 163 steps (6%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.star.sorted.bam
+    log: logs/V_D14_Rep_2.sort_bam.log
+    jobid: 135
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 135 with external jobid '8398027.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 157.
+10 of 163 steps (6%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.star.sorted.bam
+    log: logs/V_D14_Rep_1.sort_bam.log
+    jobid: 139
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 139 with external jobid '8398033.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 160.
+11 of 163 steps (7%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.star.sorted.bam
+    log: logs/C_D14_Rep_3.sort_bam.log
+    jobid: 142
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 142 with external jobid '8398034.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 151.
+12 of 163 steps (7%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.star.sorted.bam
+    log: logs/V_D14_Rep_3.sort_bam.log
+    jobid: 133
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 133 with external jobid '8398035.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 158.
+13 of 163 steps (8%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.star.sorted.bam
+    log: logs/C_D7_Rep_1.sort_bam.log
+    jobid: 140
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 140 with external jobid '8398042.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 156.
+14 of 163 steps (9%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.star.sorted.bam
+    log: logs/C_D14_Rep_2.sort_bam.log
+    jobid: 138
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 138 with external jobid '8398044.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 129.
+15 of 163 steps (9%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/C_D7_Rep_3.fix_mate_pairs.log
+    jobid: 111
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 111 with external jobid '8398045.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 162.
+16 of 163 steps (10%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.star.sorted.bam
+    log: logs/V_D2_Rep_2.sort_bam.log
+    jobid: 144
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 144 with external jobid '8398046.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 161.
+17 of 163 steps (10%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/C_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.star.sorted.bam
+    log: logs/C_D14_Rep_1.sort_bam.log
+    jobid: 143
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 143 with external jobid '8398049.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 134.
+18 of 163 steps (11%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/V_D7_Rep_3.fix_mate_pairs.log
+    jobid: 116
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 116 with external jobid '8398051.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 159.
+19 of 163 steps (12%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.star.sorted.bam
+    log: logs/V_D2_Rep_3.sort_bam.log
+    jobid: 141
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 141 with external jobid '8398053.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 128.
+20 of 163 steps (12%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/C_D2_Rep_1.fix_mate_pairs.log
+    jobid: 110
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 110 with external jobid '8398055.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 127.
+21 of 163 steps (13%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/C_D2_Rep_2.fix_mate_pairs.log
+    jobid: 109
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 109 with external jobid '8398056.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 136.
+22 of 163 steps (13%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/C_D7_Rep_2.fix_mate_pairs.log
+    jobid: 118
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 118 with external jobid '8398057.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 149.
+23 of 163 steps (14%) done
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/star_output/V_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.star.sorted.bam
+    log: logs/V_D7_Rep_2.sort_bam.log
+    jobid: 131
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 131 with external jobid '8398060.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 130.
+24 of 163 steps (15%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/V_D2_Rep_1.fix_mate_pairs.log
+    jobid: 112
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 112 with external jobid '8398062.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 132.
+25 of 163 steps (15%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/V_D7_Rep_1.fix_mate_pairs.log
+    jobid: 114
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 114 with external jobid '8398154.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 142.
+26 of 163 steps (16%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/C_D14_Rep_3.fix_mate_pairs.log
+    jobid: 124
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 124 with external jobid '8398161.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 137.
+27 of 163 steps (17%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/C_D2_Rep_3.fix_mate_pairs.log
+    jobid: 119
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 119 with external jobid '8398162.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 135.
+28 of 163 steps (17%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/V_D14_Rep_2.fix_mate_pairs.log
+    jobid: 117
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 117 with external jobid '8398163.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 139.
+29 of 163 steps (18%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/V_D14_Rep_1.fix_mate_pairs.log
+    jobid: 121
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 121 with external jobid '8398164.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 133.
+30 of 163 steps (18%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/V_D14_Rep_3.fix_mate_pairs.log
+    jobid: 115
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 115 with external jobid '8398169.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 138.
+31 of 163 steps (19%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/C_D14_Rep_2.fix_mate_pairs.log
+    jobid: 120
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 120 with external jobid '8398171.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 143.
+32 of 163 steps (20%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/C_D14_Rep_1.fix_mate_pairs.log
+    jobid: 125
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 125 with external jobid '8398172.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 140.
+33 of 163 steps (20%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.star.sorted.fixed.bam
+    log: logs/C_D7_Rep_1.fix_mate_pairs.log
+    jobid: 122
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 122 with external jobid '8398174.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 144.
+34 of 163 steps (21%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/V_D2_Rep_2.fix_mate_pairs.log
+    jobid: 126
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 126 with external jobid '8398176.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 111.
+35 of 163 steps (21%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 93
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 93 with external jobid '8398196.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 141.
+36 of 163 steps (22%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.star.sorted.fixed.bam
+    log: logs/V_D2_Rep_3.fix_mate_pairs.log
+    jobid: 123
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 123 with external jobid '8398252.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 116.
+37 of 163 steps (23%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 98
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 98 with external jobid '8398305.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 131.
+38 of 163 steps (23%) done
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.star.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.star.sorted.fixed.bam
+    log: logs/V_D7_Rep_2.fix_mate_pairs.log
+    jobid: 113
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 113 with external jobid '8398403.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 124.
+39 of 163 steps (24%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 106
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 106 with external jobid '8398406.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 114.
+40 of 163 steps (25%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 96
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 96 with external jobid '8398418.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 109.
+41 of 163 steps (25%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 91
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 91 with external jobid '8398419.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 110.
+42 of 163 steps (26%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 92
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 92 with external jobid '8398420.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 118.
+43 of 163 steps (26%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 100
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 100 with external jobid '8398460.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 93.
+44 of 163 steps (27%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_3.remove_duplicate_reads.log
+    jobid: 75
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 75 with external jobid '8398464.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 112.
+45 of 163 steps (28%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 94
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 94 with external jobid '8398467.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 117.
+46 of 163 steps (28%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 99
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 99 with external jobid '8398470.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 119.
+47 of 163 steps (29%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 101
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 101 with external jobid '8398478.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 121.
+48 of 163 steps (29%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 103
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 103 with external jobid '8398484.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 123.
+49 of 163 steps (30%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 105
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 105 with external jobid '8398487.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 115.
+50 of 163 steps (31%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 97
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 97 with external jobid '8398494.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 120.
+51 of 163 steps (31%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 102
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 102 with external jobid '8398495.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 98.
+52 of 163 steps (32%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_3.remove_duplicate_reads.log
+    jobid: 80
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 80 with external jobid '8398500.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 106.
+53 of 163 steps (33%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_3.remove_duplicate_reads.log
+    jobid: 88
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 88 with external jobid '8398502.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 96.
+54 of 163 steps (33%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_1.remove_duplicate_reads.log
+    jobid: 78
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 78 with external jobid '8398506.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 125.
+55 of 163 steps (34%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 107
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 107 with external jobid '8398509.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 122.
+56 of 163 steps (34%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 104
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 104 with external jobid '8398511.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 126.
+57 of 163 steps (35%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 108
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 108 with external jobid '8398512.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 91.
+58 of 163 steps (36%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_2.remove_duplicate_reads.log
+    jobid: 73
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 73 with external jobid '8398514.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 113.
+59 of 163 steps (36%) done
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.star.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 95
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 95 with external jobid '8398617.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 92.
+60 of 163 steps (37%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_1.remove_duplicate_reads.log
+    jobid: 74
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 74 with external jobid '8398721.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 75.
+61 of 163 steps (37%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_3.add_read_groups.log
+    jobid: 57
+    wildcards: sample=C_D7_Rep_3
+
+Finished job 100.
+62 of 163 steps (38%) done
+Submitted job 57 with external jobid '8398725.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_2.remove_duplicate_reads.log
+    jobid: 82
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 82 with external jobid '8398726.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 94.
+63 of 163 steps (39%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_1.remove_duplicate_reads.log
+    jobid: 76
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 76 with external jobid '8398730.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 99.
+64 of 163 steps (39%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_2.remove_duplicate_reads.log
+    jobid: 81
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 81 with external jobid '8398731.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 105.
+65 of 163 steps (40%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_3.remove_duplicate_reads.log
+    jobid: 87
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 87 with external jobid '8398733.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 103.
+66 of 163 steps (40%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_1.remove_duplicate_reads.log
+    jobid: 85
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 85 with external jobid '8398734.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 102.
+67 of 163 steps (41%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_2.remove_duplicate_reads.log
+    jobid: 84
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 84 with external jobid '8398735.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 97.
+68 of 163 steps (42%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_3.remove_duplicate_reads.log
+    jobid: 79
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 79 with external jobid '8398736.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 101.
+69 of 163 steps (42%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_3.remove_duplicate_reads.log
+    jobid: 83
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 83 with external jobid '8398738.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 80.
+70 of 163 steps (43%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_3.add_read_groups.log
+    jobid: 62
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 62 with external jobid '8398754.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 88.
+71 of 163 steps (44%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_3.add_read_groups.log
+    jobid: 70
+    wildcards: sample=C_D14_Rep_3
+
+Finished job 95.
+72 of 163 steps (44%) done
+Submitted job 70 with external jobid '8398763.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_2.remove_duplicate_reads.log
+    jobid: 77
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 77 with external jobid '8398764.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 78.
+73 of 163 steps (45%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_1.add_read_groups.log
+    jobid: 60
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 60 with external jobid '8398765.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 107.
+74 of 163 steps (45%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_1.remove_duplicate_reads.log
+    jobid: 89
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 89 with external jobid '8398767.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 104.
+75 of 163 steps (46%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_1.remove_duplicate_reads.log
+    jobid: 86
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 86 with external jobid '8398776.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 57.
+76 of 163 steps (47%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_3.quality_filter_reads.log
+    jobid: 23
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 23 with external jobid '8398827.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 108.
+77 of 163 steps (47%) done
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.star.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_2.remove_duplicate_reads.log
+    jobid: 90
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 90 with external jobid '8398833.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 81.
+78 of 163 steps (48%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_2.add_read_groups.log
+    jobid: 63
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 63 with external jobid '8398861.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 73.
+79 of 163 steps (48%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_2.add_read_groups.log
+    jobid: 55
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 55 with external jobid '8398870.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 74.
+80 of 163 steps (49%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_1.add_read_groups.log
+    jobid: 56
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 56 with external jobid '8398877.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 76.
+81 of 163 steps (50%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_1.add_read_groups.log
+    jobid: 58
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 58 with external jobid '8398882.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 82.
+82 of 163 steps (50%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_2.add_read_groups.log
+    jobid: 64
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 64 with external jobid '8398885.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 84.
+83 of 163 steps (51%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_2.add_read_groups.log
+    jobid: 66
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 66 with external jobid '8398987.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 87.
+84 of 163 steps (52%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_3.add_read_groups.log
+    jobid: 69
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 69 with external jobid '8398989.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 79.
+85 of 163 steps (52%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_3.add_read_groups.log
+    jobid: 61
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 61 with external jobid '8398992.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 85.
+86 of 163 steps (53%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_1.add_read_groups.log
+    jobid: 67
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 67 with external jobid '8398995.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 70.
+87 of 163 steps (53%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_3.quality_filter_reads.log
+    jobid: 49
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 49 with external jobid '8398997.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 62.
+88 of 163 steps (54%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_3.quality_filter_reads.log
+    jobid: 34
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 34 with external jobid '8398999.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 83.
+89 of 163 steps (55%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_3.add_read_groups.log
+    jobid: 65
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 65 with external jobid '8399006.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 60.
+90 of 163 steps (55%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_1.quality_filter_reads.log
+    jobid: 29
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 29 with external jobid '8399010.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 23.
+91 of 163 steps (56%) done
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/C_D7_Rep_3.local_realignment_ID.log
+    jobid: 24
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 24 with external jobid '8399088.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 77.
+92 of 163 steps (56%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_2.add_read_groups.log
+    jobid: 59
+    wildcards: sample=V_D7_Rep_2
+
+Finished job 66.
+93 of 163 steps (57%) done
+Submitted job 59 with external jobid '8399090.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_2.quality_filter_reads.log
+    jobid: 42
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 42 with external jobid '8399091.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 89.
+94 of 163 steps (58%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_1.add_read_groups.log
+    jobid: 71
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 71 with external jobid '8399092.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 63.
+95 of 163 steps (58%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_2.quality_filter_reads.log
+    jobid: 36
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 36 with external jobid '8399094.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 86.
+96 of 163 steps (59%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_1.add_read_groups.log
+    jobid: 68
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 68 with external jobid '8399095.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 90.
+97 of 163 steps (60%) done
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_2.add_read_groups.log
+    jobid: 72
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 72 with external jobid '8399105.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 55.
+98 of 163 steps (60%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_2.quality_filter_reads.log
+    jobid: 19
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 19 with external jobid '8399106.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 58.
+99 of 163 steps (61%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_1.quality_filter_reads.log
+    jobid: 25
+    wildcards: sample=V_D2_Rep_1
+
+Finished job 56.
+100 of 163 steps (61%) done
+Submitted job 25 with external jobid '8399107.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_1.quality_filter_reads.log
+    jobid: 22
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 22 with external jobid '8399108.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 69.
+101 of 163 steps (62%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_3.quality_filter_reads.log
+    jobid: 47
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 47 with external jobid '8399116.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 24.
+102 of 163 steps (63%) done
+
+rule local_realignment:
+    input: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam, data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    output: data/processedData/aligned_reads/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+    log: logs/C_D7_Rep_3.local_realignment.log
+    jobid: 3
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 3 with external jobid '8399118.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 64.
+103 of 163 steps (63%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_2.quality_filter_reads.log
+    jobid: 38
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 38 with external jobid '8399119.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 61.
+104 of 163 steps (64%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_3.quality_filter_reads.log
+    jobid: 31
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 31 with external jobid '8399122.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 49.
+105 of 163 steps (64%) done
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/C_D14_Rep_3.local_realignment_ID.log
+    jobid: 50
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 50 with external jobid '8399128.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 67.
+106 of 163 steps (65%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_1.quality_filter_reads.log
+    jobid: 43
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 43 with external jobid '8399129.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 34.
+107 of 163 steps (66%) done
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/V_D7_Rep_3.local_realignment_ID.log
+    jobid: 33
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 33 with external jobid '8399133.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 29.
+108 of 163 steps (66%) done
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/V_D7_Rep_1.local_realignment_ID.log
+    jobid: 30
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 30 with external jobid '8399134.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 42.
+109 of 163 steps (67%) done
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/C_D14_Rep_2.local_realignment_ID.log
+    jobid: 41
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 41 with external jobid '8399136.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 59.
+110 of 163 steps (67%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_2.quality_filter_reads.log
+    jobid: 27
+    wildcards: sample=V_D7_Rep_2
+
+Finished job 71.
+111 of 163 steps (68%) done
+Submitted job 27 with external jobid '8399137.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_1.quality_filter_reads.log
+    jobid: 52
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 52 with external jobid '8399138.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 65.
+112 of 163 steps (69%) done
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_3.quality_filter_reads.log
+    jobid: 39
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 39 with external jobid '8399139.torque01.util.production.int.aci.ics.psu.edu'.
+    Error in rule local_realignment:
+        jobid: 3
+        output: data/processedData/aligned_reads/C_D7_Rep_3.PE.star.sorted.fixed.filtered.postdup.RG.passed.local_realign.bam
+        log: logs/C_D7_Rep_3.local_realignment.log
+        cluster_jobid: 8399118.torque01.util.production.int.aci.ics.psu.edu
+
+Finished job 68.
+113 of 163 steps (69%) done
+Finished job 72.
+114 of 163 steps (70%) done
+Finished job 36.
+115 of 163 steps (71%) done
+Finished job 50.
+116 of 163 steps (71%) done
+Finished job 33.
+117 of 163 steps (72%) done
+Finished job 30.
+118 of 163 steps (72%) done
+Finished job 19.
+119 of 163 steps (73%) done
+Finished job 25.
+120 of 163 steps (74%) done
+Finished job 47.
+121 of 163 steps (74%) done
+Finished job 41.
+122 of 163 steps (75%) done
+Finished job 22.
+123 of 163 steps (75%) done
+Finished job 31.
+124 of 163 steps (76%) done
+Finished job 38.
+125 of 163 steps (77%) done
+Finished job 43.
+126 of 163 steps (77%) done
+Finished job 52.
+127 of 163 steps (78%) done
+Finished job 27.
+128 of 163 steps (79%) done
+Finished job 39.
+129 of 163 steps (79%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-05T145106.882742.snakemake.log

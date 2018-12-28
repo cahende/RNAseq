@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 2
+Job counts:
+	count	jobs
+	1	all
+	1	gene_level_differential_expression
+	2
+
+[Wed Dec 19 17:13:39 2018]
+rule gene_level_differential_expression:
+    input: data/processedData/read_counts/V_D2_Rep_1.readCounts.txt, data/processedData/read_counts/V_D2_Rep_2.readCounts.txt, data/processedData/read_counts/V_D2_Rep_3.readCounts.txt, data/processedData/read_counts/V_D7_Rep_1.readCounts.txt, data/processedData/read_counts/V_D7_Rep_2.readCounts.txt, data/processedData/read_counts/V_D7_Rep_3.readCounts.txt, data/processedData/read_counts/V_D14_Rep_1.readCounts.txt, data/processedData/read_counts/V_D14_Rep_2.readCounts.txt, data/processedData/read_counts/V_D14_Rep_3.readCounts.txt, data/processedData/read_counts/C_D2_Rep_1.readCounts.txt, data/processedData/read_counts/C_D2_Rep_2.readCounts.txt, data/processedData/read_counts/C_D2_Rep_3.readCounts.txt, data/processedData/read_counts/C_D7_Rep_1.readCounts.txt, data/processedData/read_counts/C_D7_Rep_2.readCounts.txt, data/processedData/read_counts/C_D7_Rep_3.readCounts.txt, data/processedData/read_counts/C_D14_Rep_1.readCounts.txt, data/processedData/read_counts/C_D14_Rep_2.readCounts.txt, data/processedData/read_counts/C_D14_Rep_3.readCounts.txt
+    output: data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    log: logs/edgeR.log
+    jobid: 19
+
+Submitted job 19 with external jobid '8537097.torque01.util.production.int.aci.ics.psu.edu'.
+[Wed Dec 19 17:14:39 2018]
+Error in rule gene_level_differential_expression:
+    jobid: 19
+    output: data/processedData/top_hits/exactTestFoldChange.txt, data/processedData/top_hits/exactTestPValue.txt
+    log: logs/edgeR.log
+    cluster_jobid: 8537097.torque01.util.production.int.aci.ics.psu.edu
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-19T171339.282901.snakemake.log

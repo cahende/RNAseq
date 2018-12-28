@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in line 36 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+Missing input files for rule star_map:
+data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq
+data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq

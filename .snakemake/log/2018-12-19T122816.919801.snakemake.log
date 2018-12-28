@@ -1,0 +1,3 @@
+WildcardError in line 137 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+No values given for wildcard 'samples'.
+  File "/gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile", line 137, in <module>

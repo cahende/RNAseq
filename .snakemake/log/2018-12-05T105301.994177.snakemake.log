@@ -1,0 +1,470 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 181
+Job counts:
+	count	jobs
+	18	add_read_groups
+	1	all
+	18	decompress_trimmed_reads
+	18	filter_mapped_and_paired_reads
+	18	fix_mate_pairs
+	18	local_realignment
+	18	local_realignment_ID
+	18	quality_filter_reads
+	18	remove_duplicate_reads
+	18	sort_bam
+	18	star_map
+	181
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq
+    jobid: 167
+    wildcards: sample=V_D2_Rep_2
+
+Submitted job 167 with external jobid '8395737.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq
+    jobid: 176
+    wildcards: sample=V_D2_Rep_3
+
+Submitted job 176 with external jobid '8395738.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq
+    jobid: 177
+    wildcards: sample=V_D2_Rep_1
+
+Submitted job 177 with external jobid '8395739.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq
+    jobid: 170
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 170 with external jobid '8395740.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq
+    jobid: 164
+    wildcards: sample=C_D7_Rep_2
+
+Submitted job 164 with external jobid '8395741.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq
+    jobid: 171
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 171 with external jobid '8395742.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq
+    jobid: 173
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 173 with external jobid '8395743.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq
+    jobid: 172
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 172 with external jobid '8395744.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq
+    jobid: 165
+    wildcards: sample=C_D2_Rep_1
+
+Submitted job 165 with external jobid '8395745.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq
+    jobid: 163
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 163 with external jobid '8395746.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq
+    jobid: 168
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 168 with external jobid '8395747.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq
+    jobid: 169
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 169 with external jobid '8395748.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq
+    jobid: 166
+    wildcards: sample=V_D7_Rep_2
+
+Submitted job 166 with external jobid '8395749.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq
+    jobid: 179
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 179 with external jobid '8395750.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq
+    jobid: 178
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 178 with external jobid '8395751.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq
+    jobid: 180
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 180 with external jobid '8395752.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq
+    jobid: 175
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 175 with external jobid '8395753.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule decompress_trimmed_reads:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq
+    jobid: 174
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 174 with external jobid '8395754.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 167.
+1 of 181 steps (0.55%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_2/
+    log: logs/V_D2_Rep_2.map_and_bam.log
+    jobid: 149
+    wildcards: sample=V_D2_Rep_2
+
+Finished job 170.
+2 of 181 steps (1%) done
+Submitted job 149 with external jobid '8395768.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 173.
+3 of 181 steps (2%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_3/
+    log: logs/C_D7_Rep_3.map_and_bam.log
+    jobid: 155
+    wildcards: sample=C_D7_Rep_3
+
+Submitted job 155 with external jobid '8395769.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_2/
+    log: logs/C_D14_Rep_2.map_and_bam.log
+    jobid: 152
+    wildcards: sample=C_D14_Rep_2
+
+Submitted job 152 with external jobid '8395770.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 176.
+4 of 181 steps (2%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_3/
+    log: logs/V_D2_Rep_3.map_and_bam.log
+    jobid: 158
+    wildcards: sample=V_D2_Rep_3
+
+Finished job 177.
+5 of 181 steps (3%) done
+Submitted job 158 with external jobid '8395771.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 171.
+6 of 181 steps (3%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D2_Rep_1/
+    log: logs/V_D2_Rep_1.map_and_bam.log
+    jobid: 159
+    wildcards: sample=V_D2_Rep_1
+
+Finished job 163.
+7 of 181 steps (4%) done
+Submitted job 159 with external jobid '8395772.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_1/
+    log: logs/C_D14_Rep_1.map_and_bam.log
+    jobid: 153
+    wildcards: sample=C_D14_Rep_1
+
+Submitted job 153 with external jobid '8395773.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_1/
+    log: logs/V_D7_Rep_1.map_and_bam.log
+    jobid: 145
+    wildcards: sample=V_D7_Rep_1
+
+Submitted job 145 with external jobid '8395774.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 169.
+8 of 181 steps (4%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D14_Rep_3/
+    log: logs/C_D14_Rep_3.map_and_bam.log
+    jobid: 151
+    wildcards: sample=C_D14_Rep_3
+
+Submitted job 151 with external jobid '8395775.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 164.
+9 of 181 steps (5%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_2/
+    log: logs/C_D7_Rep_2.map_and_bam.log
+    jobid: 146
+    wildcards: sample=C_D7_Rep_2
+
+Finished job 172.
+10 of 181 steps (6%) done
+Submitted job 146 with external jobid '8395776.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_2/
+    log: logs/C_D2_Rep_2.map_and_bam.log
+    jobid: 154
+    wildcards: sample=C_D2_Rep_2
+
+Submitted job 154 with external jobid '8395778.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 165.
+11 of 181 steps (6%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_1/
+    log: logs/C_D2_Rep_1.map_and_bam.log
+    jobid: 147
+    wildcards: sample=C_D2_Rep_1
+
+Finished job 168.
+12 of 181 steps (7%) done
+Submitted job 147 with external jobid '8395779.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_1/
+    log: logs/V_D14_Rep_1.map_and_bam.log
+    jobid: 150
+    wildcards: sample=V_D14_Rep_1
+
+Submitted job 150 with external jobid '8395780.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 178.
+13 of 181 steps (7%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_3/
+    log: logs/V_D7_Rep_3.map_and_bam.log
+    jobid: 160
+    wildcards: sample=V_D7_Rep_3
+
+Submitted job 160 with external jobid '8395796.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 179.
+14 of 181 steps (8%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_3/
+    log: logs/V_D14_Rep_3.map_and_bam.log
+    jobid: 161
+    wildcards: sample=V_D14_Rep_3
+
+Submitted job 161 with external jobid '8395797.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 180.
+15 of 181 steps (8%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D7_Rep_1/
+    log: logs/C_D7_Rep_1.map_and_bam.log
+    jobid: 162
+    wildcards: sample=C_D7_Rep_1
+
+Submitted job 162 with external jobid '8395826.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 166.
+16 of 181 steps (9%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D7_Rep_2/
+    log: logs/V_D7_Rep_2.map_and_bam.log
+    jobid: 148
+    wildcards: sample=V_D7_Rep_2
+
+Finished job 174.
+17 of 181 steps (9%) done
+Submitted job 148 with external jobid '8395840.torque01.util.production.int.aci.ics.psu.edu'.
+
+rule star_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/V_D14_Rep_2/
+    log: logs/V_D14_Rep_2.map_and_bam.log
+    jobid: 156
+    wildcards: sample=V_D14_Rep_2
+
+Submitted job 156 with external jobid '8395841.torque01.util.production.int.aci.ics.psu.edu'.
+Finished job 175.
+18 of 181 steps (10%) done
+
+rule star_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq, genomes/
+    output: data/processedData/aligned_reads/star_output/C_D2_Rep_3/
+    log: logs/C_D2_Rep_3.map_and_bam.log
+    jobid: 157
+    wildcards: sample=C_D2_Rep_3
+
+Submitted job 157 with external jobid '8395842.torque01.util.production.int.aci.ics.psu.edu'.
+    Error in rule star_map:
+        jobid: 152
+        output: data/processedData/aligned_reads/star_output/C_D14_Rep_2/
+        log: logs/C_D14_Rep_2.map_and_bam.log
+        cluster_jobid: 8395770.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 155
+        output: data/processedData/aligned_reads/star_output/C_D7_Rep_3/
+        log: logs/C_D7_Rep_3.map_and_bam.log
+        cluster_jobid: 8395769.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 158
+        output: data/processedData/aligned_reads/star_output/V_D2_Rep_3/
+        log: logs/V_D2_Rep_3.map_and_bam.log
+        cluster_jobid: 8395771.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 149
+        output: data/processedData/aligned_reads/star_output/V_D2_Rep_2/
+        log: logs/V_D2_Rep_2.map_and_bam.log
+        cluster_jobid: 8395768.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 153
+        output: data/processedData/aligned_reads/star_output/C_D14_Rep_1/
+        log: logs/C_D14_Rep_1.map_and_bam.log
+        cluster_jobid: 8395773.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 159
+        output: data/processedData/aligned_reads/star_output/V_D2_Rep_1/
+        log: logs/V_D2_Rep_1.map_and_bam.log
+        cluster_jobid: 8395772.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 151
+        output: data/processedData/aligned_reads/star_output/C_D14_Rep_3/
+        log: logs/C_D14_Rep_3.map_and_bam.log
+        cluster_jobid: 8395775.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 145
+        output: data/processedData/aligned_reads/star_output/V_D7_Rep_1/
+        log: logs/V_D7_Rep_1.map_and_bam.log
+        cluster_jobid: 8395774.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 150
+        output: data/processedData/aligned_reads/star_output/V_D14_Rep_1/
+        log: logs/V_D14_Rep_1.map_and_bam.log
+        cluster_jobid: 8395780.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 147
+        output: data/processedData/aligned_reads/star_output/C_D2_Rep_1/
+        log: logs/C_D2_Rep_1.map_and_bam.log
+        cluster_jobid: 8395779.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 146
+        output: data/processedData/aligned_reads/star_output/C_D7_Rep_2/
+        log: logs/C_D7_Rep_2.map_and_bam.log
+        cluster_jobid: 8395776.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 154
+        output: data/processedData/aligned_reads/star_output/C_D2_Rep_2/
+        log: logs/C_D2_Rep_2.map_and_bam.log
+        cluster_jobid: 8395778.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 160
+        output: data/processedData/aligned_reads/star_output/V_D7_Rep_3/
+        log: logs/V_D7_Rep_3.map_and_bam.log
+        cluster_jobid: 8395796.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 161
+        output: data/processedData/aligned_reads/star_output/V_D14_Rep_3/
+        log: logs/V_D14_Rep_3.map_and_bam.log
+        cluster_jobid: 8395797.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 162
+        output: data/processedData/aligned_reads/star_output/C_D7_Rep_1/
+        log: logs/C_D7_Rep_1.map_and_bam.log
+        cluster_jobid: 8395826.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 148
+        output: data/processedData/aligned_reads/star_output/V_D7_Rep_2/
+        log: logs/V_D7_Rep_2.map_and_bam.log
+        cluster_jobid: 8395840.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 156
+        output: data/processedData/aligned_reads/star_output/V_D14_Rep_2/
+        log: logs/V_D14_Rep_2.map_and_bam.log
+        cluster_jobid: 8395841.torque01.util.production.int.aci.ics.psu.edu
+
+    Error in rule star_map:
+        jobid: 157
+        output: data/processedData/aligned_reads/star_output/C_D2_Rep_3/
+        log: logs/C_D2_Rep_3.map_and_bam.log
+        cluster_jobid: 8395842.torque01.util.production.int.aci.ics.psu.edu
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/.snakemake/log/2018-12-05T105301.994177.snakemake.log

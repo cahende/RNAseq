@@ -1,0 +1,1158 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	18	add_read_groups
+	1	all
+	18	filter_mapped_and_paired_reads
+	18	fix_mate_pairs
+	18	local_realignment
+	18	local_realignment_ID
+	18	quality_filter_reads
+	18	remove_duplicate_reads
+	18	sort_bam
+	18	tophat_map
+	163
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+    log: logs/C_D2_Rep_1.map_and_bam.log
+    jobid: 146
+    wildcards: sample=C_D2_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+    log: logs/C_D7_Rep_3.map_and_bam.log
+    jobid: 148
+    wildcards: sample=C_D7_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+    log: logs/C_D2_Rep_3.map_and_bam.log
+    jobid: 149
+    wildcards: sample=C_D2_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+    log: logs/C_D7_Rep_1.map_and_bam.log
+    jobid: 151
+    wildcards: sample=C_D7_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+    log: logs/V_D14_Rep_3.map_and_bam.log
+    jobid: 154
+    wildcards: sample=V_D14_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+    log: logs/V_D2_Rep_3.map_and_bam.log
+    jobid: 155
+    wildcards: sample=V_D2_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+    log: logs/V_D7_Rep_3.map_and_bam.log
+    jobid: 156
+    wildcards: sample=V_D7_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_3_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+    log: logs/C_D7_Rep_2.map_and_bam.log
+    jobid: 152
+    wildcards: sample=C_D7_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D7_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+    log: logs/C_D2_Rep_2.map_and_bam.log
+    jobid: 147
+    wildcards: sample=C_D2_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D2_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+    log: logs/V_D7_Rep_2.map_and_bam.log
+    jobid: 150
+    wildcards: sample=V_D7_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+    log: logs/V_D14_Rep_1.map_and_bam.log
+    jobid: 153
+    wildcards: sample=V_D14_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+    log: logs/C_D14_Rep_2.map_and_bam.log
+    jobid: 158
+    wildcards: sample=C_D14_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+    log: logs/V_D2_Rep_1.map_and_bam.log
+    jobid: 159
+    wildcards: sample=V_D2_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+    log: logs/V_D14_Rep_2.map_and_bam.log
+    jobid: 162
+    wildcards: sample=V_D14_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D14_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D14_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+    log: logs/V_D7_Rep_1.map_and_bam.log
+    jobid: 160
+    wildcards: sample=V_D7_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D7_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D7_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+    log: logs/C_D14_Rep_1.map_and_bam.log
+    jobid: 145
+    wildcards: sample=C_D14_Rep_1
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_1_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_1_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz, data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+    log: logs/V_D2_Rep_2.map_and_bam.log
+    jobid: 161
+    wildcards: sample=V_D2_Rep_2
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/V_D2_Rep_2_R1_paired.fastq.gz data/processedData/trimmed_reads/V_D2_Rep_2_R2_paired.fastq.gz
+
+rule tophat_map:
+    input: data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz, data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+    output: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+    log: logs/C_D14_Rep_3.map_and_bam.log
+    jobid: 157
+    wildcards: sample=C_D14_Rep_3
+
+module load tophat bowtie fastqc;fastqc data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz;bowtie2-build genomes/anophelesStephensiTranscripts-astel2.3.fa genomes/anophelesStephensiTranscripts-astel2.3.fatophat -o data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/ -G genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf genomes/anophelesStephensiTranscripts-astel2.3.fa data/processedData/trimmed_reads/C_D14_Rep_3_R1_paired.fastq.gz data/processedData/trimmed_reads/C_D14_Rep_3_R2_paired.fastq.gz
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_1.sort_bam.log
+    jobid: 141
+    wildcards: sample=V_D2_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_2.sort_bam.log
+    jobid: 143
+    wildcards: sample=V_D2_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_1.sort_bam.log
+    jobid: 128
+    wildcards: sample=C_D2_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_2.sort_bam.log
+    jobid: 132
+    wildcards: sample=V_D7_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_1.sort_bam.log
+    jobid: 135
+    wildcards: sample=V_D14_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_2.sort_bam.log
+    jobid: 140
+    wildcards: sample=C_D14_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_1.sort_bam.log
+    jobid: 142
+    wildcards: sample=V_D7_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_2.sort_bam.log
+    jobid: 129
+    wildcards: sample=C_D2_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_2.sort_bam.log
+    jobid: 144
+    wildcards: sample=V_D14_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D2_Rep_3.sort_bam.log
+    jobid: 137
+    wildcards: sample=V_D2_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D2_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D2_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_2.sort_bam.log
+    jobid: 134
+    wildcards: sample=C_D7_Rep_2
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_2/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_2//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_3.sort_bam.log
+    jobid: 139
+    wildcards: sample=C_D14_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_1.sort_bam.log
+    jobid: 133
+    wildcards: sample=C_D7_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D2_Rep_3.sort_bam.log
+    jobid: 131
+    wildcards: sample=C_D2_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D2_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D2_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/
+    output: data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam
+    log: logs/C_D14_Rep_1.sort_bam.log
+    jobid: 127
+    wildcards: sample=C_D14_Rep_1
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D14_Rep_1/;samtools sort data/processedData/aligned_reads/tophat_output/C_D14_Rep_1//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D14_Rep_3.sort_bam.log
+    jobid: 136
+    wildcards: sample=V_D14_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D14_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D14_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam
+    log: logs/C_D7_Rep_3.sort_bam.log
+    jobid: 130
+    wildcards: sample=C_D7_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/C_D7_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/C_D7_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule sort_bam:
+    input: data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/
+    output: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam
+    log: logs/V_D7_Rep_3.sort_bam.log
+    jobid: 138
+    wildcards: sample=V_D7_Rep_3
+
+module load samtools fastqc;fastqc data/processedData/aligned_reads/tophat_output/V_D7_Rep_3/;samtools sort data/processedData/aligned_reads/tophat_output/V_D7_Rep_3//accepted_hits.bam -o data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam --threads 8
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/C_D14_Rep_3.fix_mate_pairs.log
+    jobid: 121
+    wildcards: sample=C_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D14_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/C_D7_Rep_1.fix_mate_pairs.log
+    jobid: 115
+    wildcards: sample=C_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D7_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/C_D14_Rep_1.fix_mate_pairs.log
+    jobid: 109
+    wildcards: sample=C_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D14_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/V_D7_Rep_3.fix_mate_pairs.log
+    jobid: 120
+    wildcards: sample=V_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D7_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/V_D14_Rep_3.fix_mate_pairs.log
+    jobid: 118
+    wildcards: sample=V_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D14_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/C_D2_Rep_3.fix_mate_pairs.log
+    jobid: 113
+    wildcards: sample=C_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D2_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/C_D7_Rep_3.fix_mate_pairs.log
+    jobid: 112
+    wildcards: sample=C_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D7_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/V_D14_Rep_2.fix_mate_pairs.log
+    jobid: 126
+    wildcards: sample=V_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D14_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/C_D7_Rep_2.fix_mate_pairs.log
+    jobid: 116
+    wildcards: sample=C_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D7_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.tophat.sorted.fixed.bam
+    log: logs/V_D2_Rep_3.fix_mate_pairs.log
+    jobid: 119
+    wildcards: sample=V_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D2_Rep_3.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/V_D7_Rep_1.fix_mate_pairs.log
+    jobid: 124
+    wildcards: sample=V_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D7_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/C_D14_Rep_2.fix_mate_pairs.log
+    jobid: 122
+    wildcards: sample=C_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D14_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/V_D14_Rep_1.fix_mate_pairs.log
+    jobid: 117
+    wildcards: sample=V_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D14_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/C_D2_Rep_2.fix_mate_pairs.log
+    jobid: 111
+    wildcards: sample=C_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D2_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/V_D2_Rep_2.fix_mate_pairs.log
+    jobid: 125
+    wildcards: sample=V_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D2_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/V_D2_Rep_1.fix_mate_pairs.log
+    jobid: 123
+    wildcards: sample=V_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D2_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.tophat.sorted.fixed.bam
+    log: logs/C_D2_Rep_1.fix_mate_pairs.log
+    jobid: 110
+    wildcards: sample=C_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/C_D2_Rep_1.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule fix_mate_pairs:
+    input: data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam
+    output: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.tophat.sorted.fixed.bam
+    log: logs/V_D7_Rep_2.fix_mate_pairs.log
+    jobid: 114
+    wildcards: sample=V_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar FixMateInformation INPUT=data/processedData/aligned_reads/sorted/V_D7_Rep_2.PE.tophat.sorted.bam OUTPUT=data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.tophat.sorted.fixed.bam SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 108
+    wildcards: sample=V_D14_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 101
+    wildcards: sample=V_D2_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 98
+    wildcards: sample=C_D7_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 103
+    wildcards: sample=C_D14_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 97
+    wildcards: sample=C_D7_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 91
+    wildcards: sample=C_D14_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 102
+    wildcards: sample=V_D7_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 95
+    wildcards: sample=C_D2_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 100
+    wildcards: sample=V_D14_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D7_Rep_3.filter_mapped_and_paired_reads.log
+    jobid: 94
+    wildcards: sample=C_D7_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D7_Rep_3.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 107
+    wildcards: sample=V_D2_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D2_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 105
+    wildcards: sample=V_D2_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D2_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 96
+    wildcards: sample=V_D7_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 92
+    wildcards: sample=C_D2_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D7_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 106
+    wildcards: sample=V_D7_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D7_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/V_D14_Rep_1.filter_mapped_and_paired_reads.log
+    jobid: 99
+    wildcards: sample=V_D14_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/V_D14_Rep_1.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D14_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 104
+    wildcards: sample=C_D14_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D14_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule filter_mapped_and_paired_reads:
+    input: data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.tophat.sorted.fixed.bam
+    output: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    log: logs/C_D2_Rep_2.filter_mapped_and_paired_reads.log
+    jobid: 93
+    wildcards: sample=C_D2_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.tophat.sorted.fixed.bam;bamtools filter -isMapped true -in data/processedData/aligned_reads/fix_mate_pairs/C_D2_Rep_2.PE.tophat.sorted.fixed.bam -out data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_3.remove_duplicate_reads.log
+    jobid: 83
+    wildcards: sample=V_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D2_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_2.remove_duplicate_reads.log
+    jobid: 80
+    wildcards: sample=C_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D7_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_2.remove_duplicate_reads.log
+    jobid: 90
+    wildcards: sample=V_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D14_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_3.remove_duplicate_reads.log
+    jobid: 76
+    wildcards: sample=C_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D7_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_3.remove_duplicate_reads.log
+    jobid: 77
+    wildcards: sample=C_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D2_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_3.remove_duplicate_reads.log
+    jobid: 82
+    wildcards: sample=V_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D14_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_3.remove_duplicate_reads.log
+    jobid: 84
+    wildcards: sample=V_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D7_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D7_Rep_1.remove_duplicate_reads.log
+    jobid: 79
+    wildcards: sample=C_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D7_Rep_1.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_1.remove_duplicate_reads.log
+    jobid: 73
+    wildcards: sample=C_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D14_Rep_1.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_3.remove_duplicate_reads.log
+    jobid: 85
+    wildcards: sample=C_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D14_Rep_3.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_1.remove_duplicate_reads.log
+    jobid: 74
+    wildcards: sample=C_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D2_Rep_1.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_2.remove_duplicate_reads.log
+    jobid: 78
+    wildcards: sample=V_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D7_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_1.remove_duplicate_reads.log
+    jobid: 87
+    wildcards: sample=V_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D2_Rep_1.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D2_Rep_2.remove_duplicate_reads.log
+    jobid: 89
+    wildcards: sample=V_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D2_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D2_Rep_2.remove_duplicate_reads.log
+    jobid: 75
+    wildcards: sample=C_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D2_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D14_Rep_1.remove_duplicate_reads.log
+    jobid: 81
+    wildcards: sample=V_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D14_Rep_1.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/C_D14_Rep_2.remove_duplicate_reads.log
+    jobid: 86
+    wildcards: sample=C_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/C_D14_Rep_2.remove_duplicate_reads.log
+
+rule remove_duplicate_reads:
+    input: data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam
+    output: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    log: logs/V_D7_Rep_1.remove_duplicate_reads.log
+    jobid: 88
+    wildcards: sample=V_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar MarkDuplicates INPUT=data/processedData/aligned_reads/mapped_and_paired_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.bam OUTPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=logs/V_D7_Rep_1.remove_duplicate_reads.log
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_1.add_read_groups.log
+    jobid: 69
+    wildcards: sample=V_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D2_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=V_D2_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_2.add_read_groups.log
+    jobid: 71
+    wildcards: sample=V_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D2_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=V_D2_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_1.add_read_groups.log
+    jobid: 56
+    wildcards: sample=C_D2_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D2_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=C_D2_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_2.add_read_groups.log
+    jobid: 60
+    wildcards: sample=V_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D7_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=V_D7_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_2.add_read_groups.log
+    jobid: 68
+    wildcards: sample=C_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D14_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=C_D14_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_1.add_read_groups.log
+    jobid: 63
+    wildcards: sample=V_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D14_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=V_D14_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_1.add_read_groups.log
+    jobid: 70
+    wildcards: sample=V_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D7_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=V_D7_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_2.add_read_groups.log
+    jobid: 57
+    wildcards: sample=C_D2_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D2_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=C_D2_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_2.add_read_groups.log
+    jobid: 72
+    wildcards: sample=V_D14_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D14_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=V_D14_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_2.add_read_groups.log
+    jobid: 62
+    wildcards: sample=C_D7_Rep_2
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D7_Rep_2.PE RGPL=Illumina RGPU=Group1 RGSM=C_D7_Rep_2.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D2_Rep_3.add_read_groups.log
+    jobid: 65
+    wildcards: sample=V_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D2_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=V_D2_Rep_3.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_1.add_read_groups.log
+    jobid: 61
+    wildcards: sample=C_D7_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D7_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=C_D7_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_1.add_read_groups.log
+    jobid: 55
+    wildcards: sample=C_D14_Rep_1
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D14_Rep_1.PE RGPL=Illumina RGPU=Group1 RGSM=C_D14_Rep_1.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D14_Rep_3.add_read_groups.log
+    jobid: 67
+    wildcards: sample=C_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D14_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=C_D14_Rep_3.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D7_Rep_3.add_read_groups.log
+    jobid: 58
+    wildcards: sample=C_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D7_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=C_D7_Rep_3.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D14_Rep_3.add_read_groups.log
+    jobid: 64
+    wildcards: sample=V_D14_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D14_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=V_D14_Rep_3.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/C_D2_Rep_3.add_read_groups.log
+    jobid: 59
+    wildcards: sample=C_D2_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=C_D2_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=C_D2_Rep_3.PE
+
+rule add_read_groups:
+    input: data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam
+    output: data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    log: logs/V_D7_Rep_3.add_read_groups.log
+    jobid: 66
+    wildcards: sample=V_D7_Rep_3
+
+module load picard fastqc;fastqc data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam;java -jar /storage/work/cxb585/bin/picard-2.10.10/picard.jar AddOrReplaceReadGroups INPUT=data/processedData/aligned_reads/duplicate_removal/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.bam OUTPUT=data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam RGLB=V_D7_Rep_3.PE RGPL=Illumina RGPU=Group1 RGSM=V_D7_Rep_3.PE
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_1.quality_filter_reads.log
+    jobid: 22
+    wildcards: sample=C_D2_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_2.quality_filter_reads.log
+    jobid: 29
+    wildcards: sample=V_D7_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_1.quality_filter_reads.log
+    jobid: 48
+    wildcards: sample=V_D2_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D2_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_2.quality_filter_reads.log
+    jobid: 51
+    wildcards: sample=V_D2_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_2.quality_filter_reads.log
+    jobid: 23
+    wildcards: sample=C_D2_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D2_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_2.quality_filter_reads.log
+    jobid: 46
+    wildcards: sample=C_D14_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_1.quality_filter_reads.log
+    jobid: 36
+    wildcards: sample=V_D14_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_1.quality_filter_reads.log
+    jobid: 49
+    wildcards: sample=V_D7_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_1.quality_filter_reads.log
+    jobid: 20
+    wildcards: sample=C_D14_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D14_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_2.quality_filter_reads.log
+    jobid: 33
+    wildcards: sample=C_D7_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D7_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D2_Rep_3.quality_filter_reads.log
+    jobid: 40
+    wildcards: sample=V_D2_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_2.quality_filter_reads.log
+    jobid: 53
+    wildcards: sample=V_D14_Rep_2
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D14_Rep_2.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_3.quality_filter_reads.log
+    jobid: 25
+    wildcards: sample=C_D7_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D14_Rep_3.quality_filter_reads.log
+    jobid: 37
+    wildcards: sample=V_D14_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D2_Rep_3.quality_filter_reads.log
+    jobid: 27
+    wildcards: sample=C_D2_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D2_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/V_D7_Rep_3.quality_filter_reads.log
+    jobid: 41
+    wildcards: sample=V_D7_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/V_D7_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D7_Rep_1.quality_filter_reads.log
+    jobid: 32
+    wildcards: sample=C_D7_Rep_1
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule quality_filter_reads:
+    input: data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam
+    output: data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    log: logs/C_D14_Rep_3.quality_filter_reads.log
+    jobid: 43
+    wildcards: sample=C_D14_Rep_3
+
+module load bamtools fastqc;fastqc data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam;bamtools filter -mapQuality '>=20' -length '75' -in data/processedData/aligned_reads/read_group/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.bam -out data/processedData/aligned_reads/quality_filter/C_D14_Rep_3.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+
+rule local_realignment_ID:
+    input: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam
+    output: data/processedData/aligned_reads/quality_filter/V_D7_Rep_1.PE.tophat.sorted.fixed.filtered.postdup.RG.passed.bam.list
+    log: logs/V_D7_Rep_1.local_realignment_ID.log
+    jobid: 50
+    wildcards: sample=V_D7_Rep_1
+
+RuleException in line 114 of /gpfs/scratch/cah422/stephensiTranscriptome-november2018-mayvInf/Snakefile:
+NameError: The name 'GATK' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}
