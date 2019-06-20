@@ -1,5 +1,3 @@
-#!/storage/home/cah422/work/bin/R-3.5.1/bin
-
 # -------------------------------------------------------------------------------------- #
 #RNAseq - Combine read counts into single file and create a DGEList - edgeR (Bioconductor Package)
 # -------------------------------------------------------------------------------------- #

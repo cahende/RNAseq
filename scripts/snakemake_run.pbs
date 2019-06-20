@@ -14,7 +14,7 @@
 cd ~/scratch/stephensiTranscriptome-november2018-mayvInf/
 
 #run snakemake
-module load python
+conda activate bioinfo
 snakemake --unlock
 snakemake --ri -j 2 --cluster "qsub -A open -l walltime=24:00:00,nodes=1:ppn=8,pmem=32gb"
 

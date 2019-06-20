@@ -7,62 +7,62 @@ library(Rsubread)
 library(edgeR)
 
 #Run feature counts on quality filtered RNAseq reads mapped to reference genome
-counts <- featureCounts(zikv1/zikv1.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/zikv1/zikv1.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=zikv1/zikv1.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/zikv1/zikv1.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
-counts <- featureCounts(zikv2/zikv2.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/zikv2/zikv2.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=zikv2/zikv2.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/zikv2/zikv2.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
-counts <- featureCounts(zikv3/zikv3.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/zikv3/zikv3.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=zikv3/zikv3.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/zikv3/zikv3.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
-counts <- featureCounts(ctrl1/ctrl1.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/ctrl1/ctrl1.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=ctrl1/ctrl1.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/ctrl1/ctrl1.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
-counts <- featureCounts(ctrl2/ctrl2.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/ctrl2/ctrl2.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=ctrl2/ctrl2.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/ctrl2/ctrl2.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
-counts <- featureCounts(ctrl3/ctrl3.final.bam, 
-                        annot.ext=genomes/AagL5.gtf,
-                        genome=genomes/AagL5.fa,
+counts <- featureCounts("data/ctrl3/ctrl3.final.bam", 
+                        annot.ext="genomes/AagL5.gtf",
+                        genome="genomes/AagL5.fa",
                         isGTFAnnotationFile=TRUE,
                         isPairedEnd=TRUE)
 write.table(x=data.frame(counts$annotation[ , c("GeneID")], counts$counts, stringsAsFactors=FALSE), 
-            file=ctrl3/ctrl3.readCounts.txt, quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
+            file="data/ctrl3/ctrl3.readCounts.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=FALSE)
 
 #Use readDGE in edgeR to create a DGEList containing all read counts for all samples in one file
 group <- factor(c(1,1,1,2,2,2))
-counts <- readDGE(c("zikv1/zikv1.readCounts.txt", 
-                    "zikv2/zikv2.readCounts.txt", 
-                    "zikv3/zikv3.readCounts.txt",
-                    "ctrl1/ctrl1.readCounts.txt", 
-                    "ctrl2/ctrl2.readCounts.txt", 
-                    "ctrl3/ctrl3.readCounts.txt"), 
+counts <- readDGE(c("data/zikv1/zikv1.readCounts.txt", 
+                    "data/zikv2/zikv2.readCounts.txt", 
+                    "data/zikv3/zikv3.readCounts.txt",
+                    "data/ctrl1/ctrl1.readCounts.txt", 
+                    "data/ctrl2/ctrl2.readCounts.txt", 
+                    "data/ctrl3/ctrl3.readCounts.txt"), 
                   columns=c(1,2), group=group)
 
 #Filter out lowly expressed genes

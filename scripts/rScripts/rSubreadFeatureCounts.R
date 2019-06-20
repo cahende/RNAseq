@@ -1,5 +1,3 @@
-#!/storage/home/cah422/work/bin/R-3.5.1/bin
-
 # -------------------------------------------------------------------------------------- #
 #RNAseq - Get read counts from filtered and mapped reads - Rsubread (Bioconductor Package)
 # -------------------------------------------------------------------------------------- #

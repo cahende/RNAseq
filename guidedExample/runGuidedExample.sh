@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # RNAsequencing pipeline example to run locally (i.e. not on computing cluster in batch)
 # tools required: NCBI eFetch utilities, SRA toolkit, trimmomatic, STAR splice-aware aligner, samtools, bamtools, and picard
@@ -57,7 +57,7 @@ samtools index data/zikv1/zikv1.sort.bam data/zikv1/zikv1.sort.bam.bai
 samtools view -Sb data/zikv2/Aligned.out.sam | samtools sort -o data/zikv2/zikv2.sort.bam
 samtools index data/zikv2/zikv2.sort.bam data/zikv2/zikv2.sort.bam.bai
 
-samtools view -Sb data/zikv3/Aligned.out.sam | samtools sort -o zikv3/data/zikv3.sort.bam
+samtools view -Sb data/zikv3/Aligned.out.sam | samtools sort -o data/zikv3/zikv3.sort.bam
 samtools index data/zikv3/zikv3.sort.bam data/zikv3/zikv3.sort.bam.bai
 
 samtools view -Sb data/ctrl1/Aligned.out.sam | samtools sort -o data/ctrl1/ctrl1.sort.bam
@@ -96,30 +96,30 @@ bamtools filter -isMapped true -in data/ctrl2/ctrl2.sort.fix.bam -out data/ctrl2
 bamtools filter -isMapped true -in data/ctrl3/ctrl3.sort.fix.bam -out data/ctrl3/ctrl3.sort.fix.map.bam
 
 # remove duplicate reads
-picard MarkDuplicates INPUT=data/zikv1/zikv1.sort.fix.map.bam OUTPUT=data/zikv1/zikv1.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv1.duplog.txt
+picard MarkDuplicates INPUT=data/zikv1/zikv1.sort.fix.map.bam OUTPUT=data/zikv1/zikv1.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv1/zikv1.duplog.txt
 
-picard MarkDuplicates INPUT=data/zikv2/zikv2.sort.fix.map.bam OUTPUT=data/zikv2/zikv2.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv2.duplog.txt
+picard MarkDuplicates INPUT=data/zikv2/zikv2.sort.fix.map.bam OUTPUT=data/zikv2/zikv2.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv2/zikv2.duplog.txt
 
-picard MarkDuplicates INPUT=data/zikv3/zikv3.sort.fix.map.bam OUTPUT=data/zikv3/zikv3.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv3.duplog.txt
+picard MarkDuplicates INPUT=data/zikv3/zikv3.sort.fix.map.bam OUTPUT=data/zikv3/zikv3.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/zikv3/zikv3.duplog.txt
 
-picard MarkDuplicates INPUT=data/ctrl1/ctrl1.sort.fix.map.bam OUTPUT=data/ctrl1/ctrl1.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl1.duplog.txt
+picard MarkDuplicates INPUT=data/ctrl1/ctrl1.sort.fix.map.bam OUTPUT=data/ctrl1/ctrl1.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl1/ctrl1.duplog.txt
 
-picard MarkDuplicates INPUT=data/ctrl2/ctrl2.sort.fix.map.bam OUTPUT=data/ctrl2/ctrl2.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl2.duplog.txt
+picard MarkDuplicates INPUT=data/ctrl2/ctrl2.sort.fix.map.bam OUTPUT=data/ctrl2/ctrl2.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl2/ctrl2.duplog.txt
 
-picard MarkDuplicates INPUT=data/ctrl3/ctrl3.sort.fix.map.bam OUTPUT=data/ctrl3/ctrl3.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl3.duplog.txt
+picard MarkDuplicates INPUT=data/ctrl3/ctrl3.sort.fix.map.bam OUTPUT=data/ctrl3/ctrl3.sort.fix.map.dup.bam VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE=data/ctrl3/ctrl3.duplog.txt
 
 # filter for mapping quality
-bamtools filter -mapQuality '>=20' -length '100' -in data/zikv1/zikv1.sort.fix.map.dup.bam -out data/zikv1/zikv1.final.bam 
+bamtools filter -mapQuality '>=20' -length '50' -in data/zikv1/zikv1.sort.fix.map.dup.bam -out data/zikv1/zikv1.final.bam 
 
-bamtools filter -mapQuality '>=20' -length '100' -in data/zikv2/zikv2.sort.fix.map.dup.bam -out data/zikv2/zikv2.final.bam
+bamtools filter -mapQuality '>=20' -length '50' -in data/zikv2/zikv2.sort.fix.map.dup.bam -out data/zikv2/zikv2.final.bam
 
-bamtools filter -mapQuality '>=20' -length '100' -in data/zikv3/zikv3.sort.fix.map.dup.bam -out data/zikv3/zikv3.final.bam
+bamtools filter -mapQuality '>=20' -length '50' -in data/zikv3/zikv3.sort.fix.map.dup.bam -out data/zikv3/zikv3.final.bam
 
-bamtools filter -mapQuality '>=20' -length '100' -in data/ctrl1/ctrl1.sort.fix.map.dup.bam -out data/ctrl1/ctrl1.final.bam
+bamtools filter -mapQuality '>=20' -length '50' -in data/ctrl1/ctrl1.sort.fix.map.dup.bam -out data/ctrl1/ctrl1.final.bam
 
-bamtools filter -mapQuality '>=20' -length '100' -in data/ctrl2/ctrl2.sort.fix.map.dup.bam -out data/ctrl2/ctrl2.final.bam
+bamtools filter -mapQuality '>=20' -length '50' -in data/ctrl2/ctrl2.sort.fix.map.dup.bam -out data/ctrl2/ctrl2.final.bam
 
-bamtools filter -mapQuality '>=20' -length '100' -in data/ctrl3/ctrl3.sort.fix.map.dup.bam -out data/ctrl3/ctrl3.final.bam
+bamtools filter -mapQuality '>=20' -length '50' -in data/ctrl3/ctrl3.sort.fix.map.dup.bam -out data/ctrl3/ctrl3.final.bam
 
 # perform differential expression analysis using edgeR and rSubread
 Rscript localExample.R

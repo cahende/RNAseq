@@ -14,9 +14,6 @@ GENOME_ANNOTATION: "genomes/anophelesStephensiBaseFeatures-asteL2.3.gtf"
 
 #Define important paths
 ADAPTERS: "/storage/work/cxb585/bin/Trimmomatic-0.36/adapters/TruSeq3-PE.fa"
-GATK: "/storage/work/cxb585/bin/GenomeAnalysisTK-3.8-0-ge9d806836/GenomeAnalysisTK.jar"
-PICARD: "/storage/work/cxb585/bin/picard-2.10.10/picard.jar"
-TRIMMOMATIC: "/storage/work/cxb585/bin/Trimmomatic-0.36/trimmomatic-0.36.jar"
 
-#Select modules to load
-MODULES: ["bamtools", "bcftools", "tophat", "gatk", "picard", "python", "samtools", "trimmomatic", "vcftools"]
+#Tools necessary to run
+TOOLS: ["bamtools", "bcftools", "tophat", "gatk", "picard", "python", "samtools", "trimmomatic", "vcftools"]

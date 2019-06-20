@@ -13,7 +13,7 @@
 cd ~/scratch/admixture_analysis/
 
 #call snakemake
-module load python
+conda activate bioinfo
 snakemake
 
 exit;

@@ -10,7 +10,7 @@
 # -------------------------------------------------- #
 
 #load modules
-module load star 
+conda activate bioinfo
 
 #move to correct directory
 cd ~/scratch/stephensiTranscriptome-november2018-mayvInf/genomes/
