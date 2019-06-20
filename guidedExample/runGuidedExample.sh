@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# RNAsequencing pipeline example to run locally (i.e. not on computing cluster in batch)
+# RNAsequencing pipeline example 
 # tools required: NCBI eFetch utilities, SRA toolkit, trimmomatic, STAR splice-aware aligner, samtools, bamtools, and picard
 
 # download test data from SRA - Aedes aegypt transcrptome infected with Zika virus - control v infected at 2 days post infection (Hughes et al. 2017) 
