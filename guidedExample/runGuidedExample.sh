@@ -3,6 +3,9 @@
 # RNAsequencing pipeline example 
 # tools required: NCBI utilities, SRA toolkit, trimmomatic, STAR splice-aware aligner, samtools, bamtools, picard, rSubread, and edgeR
 
+# activate appropiate environment via conda
+conda activate bioinfo
+
 # download test data from SRA - Aedes aegypt transcrptome infected with Zika virus - control v infected at 2 days post infection (Hughes et al. 2017) 
 esearch -db sra -query PRJNA399504 | efetch -format runinfo > PRJNA399504.csv 
 mkdir data
