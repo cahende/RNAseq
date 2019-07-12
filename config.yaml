@@ -1,5 +1,5 @@
 #Set sample names
-SAMPLES: ["V_D2_Rep_1", "V_D2_Rep_2", "V_D2_Rep_3", "V_D7_Rep_1", "V_D7_Rep_2", "V_D7_Rep_3", "V_D14_Rep_1", "V_D14_Rep_2", "V_D14_Rep_3", "C_D2_Rep_1", "C_D2_Rep_2", "C_D2_Rep_3", "C_D7_Rep_1", "C_D7_Rep_2", "C_D7_Rep_3", "C_D14_Rep_1", "C_D14_Rep_2", "C_D14_Rep_3]
+SAMPLES: ["V_D2_Rep_1", "V_D2_Rep_2", "V_D2_Rep_3", "V_D7_Rep_1", "V_D7_Rep_2", "V_D7_Rep_3", "V_D14_Rep_1", "V_D14_Rep_2", "V_D14_Rep_3", "C_D2_Rep_1", "C_D2_Rep_2", "C_D2_Rep_3", "C_D7_Rep_1", "C_D7_Rep_2", "C_D7_Rep_3", "C_D14_Rep_1", "C_D14_Rep_2", "C_D14_Rep_3"]
 
 #Set group ID
 GROUP_ID: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "2", "2", "2", "2", "2", "2", "2", "2", "2"]

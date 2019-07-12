@@ -23,7 +23,7 @@ rule trim_reads_and_download_genome:
         "fastqc {input};"
         "if [ -d genomes ]"
         "then echo genomes present"
-        "else mkdir genomes; cd genomes; wget -O {config[GENOME]} {config[GENOME_LINK]}; wget -O {config[GENOME_ANNOTATION]} {config[GENOME_ANNOTATION_LINK]}; gunzip -d genomes/*.gz; cd .."
+        "else mkdir genomes; cd genomes; wget -O {config[GENOME]} {config[GENOME_LINK]}; wget -O {config[GENOME_ANNOTATION]} {config[GENOME_ANNOTATION_LINK]}; gunzip -d genomes/*.gz; cd ..; STAR --runMode genomeGenerate --genomeDir genomes --genomeFastaFiles *.fa --sjdbGTFfile *.gtf --sjdbOverhang 74"
         "fi"
         "trimmomatic PE -phred33 -trimlog {log} {input} {output} ILLUMINACLIP:{config[ADAPTERS]}:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36"
 
