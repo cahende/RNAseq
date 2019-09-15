@@ -10,12 +10,11 @@
 # -------------------------------------------------- #
 
 #move to correct directory
-# cd ~/scratch/stephensiTranscriptome-november2018-mayvInf/
-# cd ~/scratch/RNAseq
+cd ~/scratch/stephensiTranscriptome-november2018-mayvInf/
 
 #run snakemake
 conda activate bioinfo
 snakemake --unlock
-snakemake --ri -j 182 --cluster "qsub -A open -l walltime=24:00:00,nodes=1:ppn=8,pmem=32gb"
+snakemake --ri -j 182 --cluster-config cluster.yaml --cluster "qsub -A {cluster.QUEUE} -l walltime={cluster.WALLTIME} -l nodes={cluster.NODES}:ppn={cluster.PPN} -l pmem={cluster.PMEM} -M {cluster.EMAIL} -m abe"
 
 exit;

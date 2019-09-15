@@ -10,7 +10,7 @@ rule all:
         "data/processedData/top_hits/glmControlVsInfectedPValue.txt",
         "data/processedData/top_hits/glmControlVsInfectedLogFC.txt"
 
-rule trim_reads_and_download_genome:
+rule trim_reads:
     input:
         expand("data/rawData/{{sample}}_{read}.fastq.gz", read=["R1", "R2"])
     output:
@@ -20,11 +20,8 @@ rule trim_reads_and_download_genome:
         "data/processedData/trimmed_reads/{sample}_R2_unpaired.fastq.gz"
     log: "logs/trim/{sample}.trim.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
-        "if [ -d genomes ]"
-        "then echo genomes present"
-        "else mkdir genomes; cd genomes; wget -O {config[GENOME]} {config[GENOME_LINK]}; wget -O {config[GENOME_ANNOTATION]} {config[GENOME_ANNOTATION_LINK]}; gunzip -d genomes/*.gz; cd ..; STAR --runMode genomeGenerate --genomeDir genomes --genomeFastaFiles *.fa --sjdbGTFfile *.gtf --sjdbOverhang 74"
-        "fi"
         "trimmomatic PE -phred33 -trimlog {log} {input} {output} ILLUMINACLIP:{config[ADAPTERS]}:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36"
 
 rule decompress_trimmed_reads:
@@ -45,6 +42,7 @@ rule star_map:
         directory("data/processedData/aligned_reads/star_output/{sample}/")
     log: "logs/{sample}.map_and_bam.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "STAR --runThreadN 8 --genomeDir genomes --readFilesIn {input} --sjdbGTFfile {config[GENOME_ANNOTATION]} --sjdbOverhang 74 --outFileNamePrefix {output}"
 
@@ -55,6 +53,7 @@ rule sort_bam:
         "data/processedData/aligned_reads/sorted/{sample}.PE.star.sorted.bam"
     log: "logs/{sample}.sort_bam.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "samtools view -Sb {input}/Aligned.out.sam | samtools sort -o {output} --threads 8"
 
@@ -65,6 +64,7 @@ rule index_bam:
         "data/processedData/aligned_reads/sorted/{sample}.PE.star.sorted.bam.bai"
     log: "logs/{sample}.index_bam.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "samtools index {input} {output}"
 
@@ -75,6 +75,7 @@ rule fix_mate_pairs:
         "data/processedData/aligned_reads/fix_mate_pairs/{sample}.PE.star.sorted.fixed.bam"
     log: "logs/{sample}.fix_mate_pairs.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "picard FixMateInformation INPUT={input} OUTPUT={output} SORT_ORDER=coordinate VALIDATION_STRINGENCY=LENIENT CREATE_INDEX=true"
 
@@ -85,6 +86,7 @@ rule filter_mapped_and_paired_reads:
         "data/processedData/aligned_reads/mapped_and_paired_filter/{sample}.PE.star.sorted.fixed.filtered.bam"
     log: "logs/{sample}.filter_mapped_and_paired_reads.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "bamtools filter -isMapped true -in {input} -out {output}"
 
@@ -95,6 +97,7 @@ rule remove_duplicate_reads:
         "data/processedData/aligned_reads/duplicate_removal/{sample}.PE.star.sorted.fixed.filtered.postdup.bam"
     log: "logs/{sample}.remove_duplicate_reads.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "picard MarkDuplicates INPUT={input} OUTPUT={output} VALIDATION_STRINGENCY=SILENT REMOVE_DUPLICATES=true MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=4000 METRICS_FILE={log}"
 
@@ -105,6 +108,7 @@ rule add_read_groups:
         "data/processedData/aligned_reads/read_group/{sample}.PE.star.sorted.fixed.filtered.postdup.RG.bam"
     log: "logs/{sample}.add_read_groups.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "picard AddOrReplaceReadGroups INPUT={input} OUTPUT={output} RGLB={wildcards.sample}.PE RGPL=Illumina RGPU=Group1 RGSM={wildcards.sample}.PE"
 
@@ -115,6 +119,7 @@ rule quality_filter_reads:
         "data/processedData/aligned_reads/quality_filter/{sample}.PE.star.sorted.fixed.filtered.postdup.RG.passed.bam"
     log: "logs/{sample}.quality_filter_reads.log"
     shell:
+        "conda activate bioinfo;"
         "fastqc {input};"
         "bamtools filter -mapQuality '>=20' -length '75' -in {input} -out {output};"
         "fastqc {output}"
