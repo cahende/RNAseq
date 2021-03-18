@@ -1,0 +1,280 @@
+#RNAseq - Post alignment analysis for differential expression 
+#EdgeR and Rsubread for performing differential expression (Bioconductor Package)
+#topGO for performing gene ontology pathway analysis (Bioconductor Package)
+
+#Load packages
+library(edgeR)
+library(Rgraphviz)
+library(VennDiagram)
+
+#Use readDGE in edgeR to create a DGEList containing all read counts for all samples in one file
+groupTotal <- factor(c(1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6,6,6))
+countsTotal <- readDGE(c("Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D2_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D2_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D2_Rep_3.readCounts.txt",
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D7_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D7_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D7_Rep_3.readCounts.txt",
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D14_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D14_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/C_D14_Rep_3.readCounts.txt",
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D2_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D2_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D2_Rep_3.readCounts.txt",
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D7_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D7_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D7_Rep_3.readCounts.txt",
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D14_Rep_1.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D14_Rep_2.readCounts.txt", 
+                         "Desktop/thesisChapters1and2/stephensiTranscriptome/stephensiRNAseqRRC/V_D14_Rep_3.readCounts.txt"), 
+                       columns=c(1,2), group=groupTotal)
+
+#Create design matrix for grouping samples
+designTotal <- model.matrix(~0+groupTotal)
+colnames(designTotal) <- c("ctrl2","ctrl7","ctrl14","inf2","inf7","inf14")
+
+contrastsTotal <- makeContrasts(
+  twodpi = inf2-ctrl2,
+  sevendpi = inf7-ctrl7, 
+  fourteendpi = inf14-ctrl14,
+  seventotwo = (inf7-inf2) - (ctrl7-ctrl2), 
+  fourteentoseven = (inf14-inf7)- (ctrl14-ctrl7),
+  levels=designTotal)
+
+#Filter out lowly expressed genes (Chen & Smyth (2016))
+keepTotal <- filterByExpr(countsTotal)
+countsTotal <- countsTotal[keepTotal, , keep.lib.sizes=FALSE]
+
+#Normalize (TMM- RNA composition)
+countsTotal <- calcNormFactors(countsTotal)
+
+#Estimate common dispersion from mean
+countsTotal <- estimateDisp(countsTotal, designTotal)
+
+#GLM to look for differentially expressed genes
+fitTotal <- glmQLFit(countsTotal, designTotal)
+
+contrast.list=colnames(contrastsTotal)
+
+qlf = list()
+
+do.qlf.test = function (contrast) {
+  
+  glmQLFTest(fitTotal, contrast = contrastsTotal[,contrast])
+}
+
+qlf = lapply(contrast.list, do.qlf.test)
+names(qlf) = contrast.list
+
+#Create a filter for determining interesting genes to include in GO analysis 
+#Interesting genes are those with P-Values < 0.05 in edgeR differnetial expression 
+interesting <- function(x) {
+  for (i in 1:nrow(x)) {
+    if (x$PValue[i] <= 0.05 & x$logFC[i] >= 1) {
+      x$interesting[i] <- "POSITIVE"
+    }
+    else if (x$PValue[i] <= 0.05 & x$logFC[i] <= -1) {
+      x$interesting[i] <- "NEGATIVE"
+    }
+    else {
+      x$interesting[i] <- "NOT"
+    }
+  }
+  return(x$interesting)
+}
+
+selGenesPositive <- function(x) {
+  positive <- c()
+  for (i in 1:nrow(x)) {
+    if (x$logFC[i] >= 1 & x$PValue[i] <= 0.05){
+      positive <- c(positive, x[i,7])
+    }
+  }
+  return(positive)
+}
+
+selGenesNegative <- function(x) {
+  negative <- c()
+  for (i in 1:nrow(x)) {
+    if (x$logFC[i] <= -1 & x$PValue[i] <= 0.05){
+      negative <- c(negative, x[i,7])
+    }
+  }
+  return(negative)
+}
+
+timepointReclassificationFun <- function(x, positive, negative) {
+  interesting <- c()
+  for (i in 1:nrow(x)) {
+    if (x$ID[i] %in% positive) {
+      interesting[i] <- "POSITIVE"
+    }
+    else if (x$ID[i] %in% negative) {
+      interesting[i] <- "NEGATIVE"
+    }
+    else {
+      interesting[i] <- "NOT"
+    }
+  }
+  return(interesting)
+}
+
+#Isolate contrasts in separate tables and define interesting genes
+
+twoDPI <- qlf[["twodpi"]]$table
+twoDPI$FDR <- p.adjust(twoDPI$PValue, "fdr", n=nrow(twoDPI))
+twoDPI$interesting <- interesting(twoDPI)
+twoDPI$ID <- rownames(twoDPI)
+twoDPIPositive <- selGenesPositive(twoDPI)
+twoDPINegative <- selGenesNegative(twoDPI)
+twoDPIRegulated <- c(twoDPINegative, twoDPIPositive)
+
+sevenDPI <- qlf[["sevendpi"]]$table
+sevenDPI$FDR <- p.adjust(sevenDPI$PValue, "fdr", n=nrow(sevenDPI))
+sevenDPI$interesting <- interesting(sevenDPI)
+sevenDPI$ID <- rownames(sevenDPI)
+sevenDPIPositive <- selGenesPositive(sevenDPI)
+sevenDPINegative <- selGenesNegative(sevenDPI)
+sevenDPIRegulated <- c(sevenDPINegative, sevenDPIPositive)
+
+fourteenDPI <- qlf[["fourteendpi"]]$table
+fourteenDPI$FDR <- p.adjust(fourteenDPI$PValue, "fdr", n=nrow(fourteenDPI))
+fourteenDPI$interesting <- interesting(fourteenDPI)
+fourteenDPI$ID <- rownames(fourteenDPI)
+fourteenDPIPositive <- selGenesPositive(fourteenDPI)
+fourteenDPINegative <- selGenesNegative(fourteenDPI)
+fourteenDPIRegulated <- c(fourteenDPINegative, fourteenDPIPositive)
+
+seventotwo <- qlf[["seventotwo"]]$table
+seventotwo$FDR <- p.adjust(seventotwo$PValue, "fdr", n=nrow(seventotwo))
+seventotwo$interesting <- interesting(seventotwo)
+seventotwo$ID <- rownames(seventotwo)
+seventotwoPositive <- selGenesPositive(seventotwo)
+seventotwoNegative <- selGenesNegative(seventotwo)
+seventotwoRegulated <- c(seventotwoNegative, seventotwoPositive)
+
+fourteentoseven <- qlf[["fourteentoseven"]]$table
+fourteentoseven$FDR <- p.adjust(fourteentoseven$PValue, "fdr", n=nrow(fourteentoseven))
+fourteentoseven$interesting <- interesting(fourteentoseven)
+fourteentoseven$ID <- rownames(fourteentoseven)
+fourteentosevenPositive <- selGenesPositive(fourteentoseven)
+fourteentosevenNegative <- selGenesNegative(fourteentoseven)
+fourteentosevenRegulated <- c(fourteentosevenNegative, fourteentosevenPositive)
+
+# Create venn diagrams for upregulated (positive) or downregulated (negative) terms for relevant groupings
+venn.diagram(list(twoDPINegative, sevenDPINegative, fourteenDPINegative),
+             category.names=c("Two", "Seven", "Fourteen"),
+             cat.cex=1.5, cex=2,
+             filename='negativeVennTimePoint.tiff')
+
+venn.diagram(list(twoDPIPositive, sevenDPIPositive, fourteenDPIPositive),
+             category.names=c("Two", "Seven", "Fourteen"),
+             cat.cex=1.5, cex=2,
+             filename='positiveVennTimePoint.tiff')
+
+venn.diagram(list(twoDPINegative, sevenDPINegative, fourteenDPINegative, seventotwoNegative, fourteentosevenNegative),
+             category.names=c("Two", "Seven", "Fourteen", "7-2", "14-7"),
+             cat.cex=1.5, cex=2,
+             filename='negativeVennTotal.tiff')
+
+venn.diagram(list(twoDPIPositive, sevenDPIPositive, fourteenDPIPositive, seventotwoPositive, fourteentosevenPositive),
+             category.names=c("Two", "Seven", "Fourteen", "7-2", "14-7"),
+             cat.cex=1.5, cex=2,
+             filename='positiveVennTotal.tiff')
+
+venn.diagram(list(seventotwoPositive, fourteentosevenPositive),
+             category.names=c("7-2", "14-7"),
+             cat.cex=1.25, cex=2,
+             filename='positiveVennTime.tiff')
+
+venn.diagram(list(seventotwoNegative, fourteentosevenNegative),
+             category.names=c("7-2", "14-7"),
+             cat.cex=1.25, cex=2,
+             filename='negativeVennTime.tiff')
+
+# Volcano plots
+# -log10 transform P-values for better distribution on visualization
+
+for (i in 1:nrow(twoDPI)) {
+  twoDPI$log10PValue[i] <- -log10(twoDPI$PValue[i])
+}
+
+for (i in 1:nrow(sevenDPI)) {
+  sevenDPI$log10PValue[i] <- -log10(sevenDPI$PValue[i])
+}
+
+for (i in 1:nrow(fourteenDPI)) {
+  fourteenDPI$log10PValue[i] <- -log10(fourteenDPI$PValue[i])
+}
+
+for (i in 1:nrow(seventotwo)) {
+  seventotwo$log10PValue[i] <- -log10(seventotwo$PValue[i])
+}
+
+for (i in 1:nrow(fourteentoseven)) {
+  fourteentoseven$log10PValue[i] <- -log10(fourteentoseven$PValue[i])
+}
+
+# Function to create volcano plot
+volcanoPlot <- function(X) {
+  ggplot(X) +
+    geom_point(aes(x=logFC, y=log10PValue, color = interesting)) +
+    scale_color_manual(values=c("red", "grey", "blue")) +
+    labs(x="log2(FC)", y="-log10(P-Value)") +
+    ylim(0, 5.5) +
+    xlim(-10, 10) +
+    theme_classic() +
+    theme(legend.position="none", axis.text=element_text(size=20), axis.title=element_text(size=20))
+}
+
+volcanoPlot(twoDPI)
+volcanoPlot(sevenDPI)
+volcanoPlot(fourteenDPI)
+volcanoPlot(seventotwo)
+volcanoPlot(fourteentoseven)
+
+#Write results out to .csv
+write.table(twoDPI, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExp-two.csv")
+write.table(twoDPIPostive, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-twoPositive.csv")
+write.table(twoDPINegative, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-twoNegative.csv")
+write.table(twoDPIRegulated, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-twoDPI.csv")
+
+write.table(sevenDPI, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExp-seven.csv")
+write.table(sevenDPIPostive, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-sevenPositive.csv")
+write.table(sevenDPINegative, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-sevenNegative.csv")
+write.table(sevenDPIRegulated, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-sevenDPI.csv")
+
+write.table(fourteenDPI, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExp-fourteen.csv")
+write.table(fourteenDPIPostive, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-fourteenPositive.csv")
+write.table(fourteenDPINegative, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-fourteenNegative.csv")
+write.table(fourteenDPIRegulated, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-fourteenDPI.csv")
+
+write.table(seventotwo, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExp-7to2.csv")
+write.table(seventotwoPositive, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-7to2Positive.csv")
+write.table(seventotwoNegative, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-7to2Negative.csv")
+write.table(seventotwoRegulated, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-7to2.csv")
+
+write.table(fourteentoseven, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExp-14to7.csv")
+write.table(fourteentosevenPositive, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-14to7Positive.csv")
+write.table(fourteentosevenNegative, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-14to7Negative.csv")
+write.table(fourteentosevenRegulated, sep = ",", col.names = NA, row.names = TRUE, 
+            file = "Desktop/diffExpTerms-14to7.csv")
